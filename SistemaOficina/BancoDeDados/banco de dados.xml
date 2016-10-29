@@ -1,0 +1,1005 @@
+<?xml version="1.0" standalone="yes" ?>
+<DBMODEL Version="4.0">
+<SETTINGS>
+<GLOBALSETTINGS ModelName="banco de dados" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="78.00" XPos="257" YPos="24" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="" DefQueryDBConn="" Printer="CutePDF Writer" HPageCount="2.0" PageAspectRatio="1.414398064125832" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="0" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
+<DATATYPEGROUPS>
+<DATATYPEGROUP Name="Numeric Types" Icon="1" />
+<DATATYPEGROUP Name="Date and Time Types" Icon="2" />
+<DATATYPEGROUP Name="String Types" Icon="3" />
+<DATATYPEGROUP Name="Blob and Text Types" Icon="4" />
+<DATATYPEGROUP Name="User defined Types" Icon="5" />
+<DATATYPEGROUP Name="Geographic Types" Icon="6" />
+</DATATYPEGROUPS>
+<DATATYPES>
+<DATATYPE ID="1" IDGroup="0" TypeName="TINYINT" Description="A very small integer. The signed range is -128 to 127. The unsigned range is 0 to 255." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="2" IDGroup="0" TypeName="SMALLINT" Description="A small integer. The signed range is -32768 to 32767. The unsigned range is 0 to 65535." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="3" IDGroup="0" TypeName="MEDIUMINT" Description="A medium-size integer. The signed range is -8388608 to 8388607. The unsigned range is 0 to 16777215." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="4" IDGroup="0" TypeName="INT" Description="A normal-size integer. The signed range is -2147483648 to 2147483647. The unsigned range is 0 to 4294967295." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="1" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="0" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="5" IDGroup="0" TypeName="INTEGER" Description="A normal-size integer. The signed range is -2147483648 to 2147483647. The unsigned range is 0 to 4294967295." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="1" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="1" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="6" IDGroup="0" TypeName="BIGINT" Description="A large integer. The signed range is -9223372036854775808 to 9223372036854775807. The unsigned range is 0 to 18446744073709551615." ParamCount="1" OptionCount="2" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="UNSIGNED" Default="0" />
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="7" IDGroup="0" TypeName="FLOAT" Description="A small (single-precision) floating-point number. Cannot be unsigned. Allowable values are -3.402823466E+38 to -1.175494351E-38, 0, and 1.175494351E-38 to 3.402823466E+38." ParamCount="1" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="precision" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="8" IDGroup="0" TypeName="FLOAT" Description="A small (single-precision) floating-point number. Cannot be unsigned. Allowable values are -3.402823466E+38 to -1.175494351E-38, 0, and 1.175494351E-38 to 3.402823466E+38." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="9" IDGroup="0" TypeName="DOUBLE" Description="A normal-size (double-precision) floating-point number. Cannot be unsigned. Allowable values are -1.7976931348623157E+308 to -2.2250738585072014E-308, 0, and 2.2250738585072014E-308 to 1.7976931348623157E+308." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="2" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="10" IDGroup="0" TypeName="DOUBLE PRECISION" Description="This is a synonym for DOUBLE." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="2" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="11" IDGroup="0" TypeName="REAL" Description="This is a synonym for DOUBLE." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="2" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="12" IDGroup="0" TypeName="DECIMAL" Description="An unpacked floating-point number. Cannot be unsigned. Behaves like a CHAR column." ParamCount="2" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="3" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="13" IDGroup="0" TypeName="NUMERIC" Description="This is a synonym for DECIMAL." ParamCount="2" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="3" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+<PARAM Name="decimals" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="ZEROFILL" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="14" IDGroup="1" TypeName="DATE" Description="A date. The supported range is \a1000-01-01\a to \a9999-12-31\a." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="15" IDGroup="1" TypeName="DATETIME" Description="A date and time combination. The supported range is \a1000-01-01 00:00:00\a to \a9999-12-31 23:59:59\a." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="16" IDGroup="1" TypeName="TIMESTAMP" Description="A timestamp. The range is \a1970-01-01 00:00:00\a to sometime in the year 2037. The length can be 14 (or missing), 12, 10, 8, 6, 4, or 2 representing YYYYMMDDHHMMSS, ... , YYYYMMDD, ... , YY formats." ParamCount="1" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="17" IDGroup="1" TypeName="TIME" Description="A time. The range is \a-838:59:59\a to \a838:59:59\a." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="18" IDGroup="1" TypeName="YEAR" Description="A year in 2- or 4-digit format (default is 4-digit)." ParamCount="1" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="19" IDGroup="2" TypeName="CHAR" Description="A fixed-length string (1 to 255 characters) that is always right-padded with spaces to the specified length when stored. values are sorted and compared in case-insensitive fashion according to the default character set unless the BINARY keyword is given." ParamCount="1" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="20" IDGroup="2" TypeName="VARCHAR" Description="A variable-length string (1 to 255 characters). Values are sorted and compared in case-sensitive fashion unless the BINARY keyword is given." ParamCount="1" OptionCount="1" ParamRequired="1" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="length" />
+</PARAMS>
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="21" IDGroup="2" TypeName="BIT" Description="This is a synonym for CHAR(1)." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="22" IDGroup="2" TypeName="BOOL" Description="This is a synonym for CHAR(1)." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="23" IDGroup="3" TypeName="TINYBLOB" Description="A column maximum length of 255 (2^8 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="24" IDGroup="3" TypeName="BLOB" Description="A column maximum length of 65535 (2^16 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="25" IDGroup="3" TypeName="MEDIUMBLOB" Description="A column maximum length of 16777215 (2^24 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="26" IDGroup="3" TypeName="LONGBLOB" Description="A column maximum length of 4294967295 (2^32 - 1) characters. Values are sorted and compared in case-sensitive fashion." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="27" IDGroup="3" TypeName="TINYTEXT" Description="A column maximum length of 255 (2^8 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="28" IDGroup="3" TypeName="TEXT" Description="A column maximum length of 65535 (2^16 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="29" IDGroup="3" TypeName="MEDIUMTEXT" Description="A column maximum length of 16777215 (2^24 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="30" IDGroup="3" TypeName="LONGTEXT" Description="A column maximum length of 4294967295 (2^32 - 1) characters." ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="31" IDGroup="3" TypeName="ENUM" Description="An enumeration. A string object that can have only one value, chosen from the list of values." ParamCount="1" OptionCount="0" ParamRequired="1" EditParamsAsString="1" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="values" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="32" IDGroup="3" TypeName="SET" Description="A set. A string object that can have zero or more values, each of which must be chosen from the list of values." ParamCount="1" OptionCount="0" ParamRequired="1" EditParamsAsString="1" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<PARAMS>
+<PARAM Name="values" />
+</PARAMS>
+</DATATYPE>
+<DATATYPE ID="33" IDGroup="4" TypeName="Varchar(20)" Description="" ParamCount="0" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="34" IDGroup="4" TypeName="Varchar(45)" Description="" ParamCount="0" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="35" IDGroup="4" TypeName="Varchar(255)" Description="" ParamCount="0" OptionCount="1" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+<OPTIONS>
+<OPTION Name="BINARY" Default="0" />
+</OPTIONS>
+</DATATYPE>
+<DATATYPE ID="36" IDGroup="5" TypeName="GEOMETRY" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="38" IDGroup="5" TypeName="LINESTRING" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="39" IDGroup="5" TypeName="POLYGON" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="40" IDGroup="5" TypeName="MULTIPOINT" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="41" IDGroup="5" TypeName="MULTILINESTRING" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="42" IDGroup="5" TypeName="MULTIPOLYGON" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+<DATATYPE ID="43" IDGroup="5" TypeName="GEOMETRYCOLLECTION" Description="Geographic Datatype" ParamCount="0" OptionCount="0" ParamRequired="0" EditParamsAsString="0" SynonymGroup="0" PhysicalMapping="0" PhysicalTypeName="" >
+</DATATYPE>
+</DATATYPES>
+<COMMON_DATATYPES>
+<COMMON_DATATYPE ID="5" />
+<COMMON_DATATYPE ID="8" />
+<COMMON_DATATYPE ID="20" />
+<COMMON_DATATYPE ID="15" />
+<COMMON_DATATYPE ID="22" />
+<COMMON_DATATYPE ID="28" />
+<COMMON_DATATYPE ID="26" />
+<COMMON_DATATYPE ID="33" />
+<COMMON_DATATYPE ID="34" />
+<COMMON_DATATYPE ID="35" />
+</COMMON_DATATYPES>
+<TABLEPREFIXES>
+<TABLEPREFIX Name="Default (no prefix)" />
+</TABLEPREFIXES>
+<REGIONCOLORS>
+<REGIONCOLOR Color="Red=#FFEEEC" />
+<REGIONCOLOR Color="Yellow=#FEFDED" />
+<REGIONCOLOR Color="Green=#EAFFE5" />
+<REGIONCOLOR Color="Cyan=#ECFDFF" />
+<REGIONCOLOR Color="Blue=#F0F1FE" />
+<REGIONCOLOR Color="Magenta=#FFEBFA" />
+</REGIONCOLORS>
+<POSITIONMARKERS>
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+<POSITIONMARKER ZoomFac="-1.0" X="0" Y="0" />
+</POSITIONMARKERS>
+</SETTINGS>
+<METADATA>
+<REGIONS>
+</REGIONS>
+<TABLES>
+<TABLE ID="1152" Tablename="Cliente" PrevTableName="Table_01" XPos="747" YPos="773" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="2" >
+<COLUMNS>
+<COLUMN ID="1171" ColName="Codigo_Cliente" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1230" ColName="Endere\231o_Codigo_Endereco" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1173" ColName="Nome_Cliente" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1174" ColName="Telefone_Celular" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1175" ColName="Telefone_Residencial" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1176" ColName="CPF" PrevColName="" Pos="4" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1177" ColName="RG" PrevColName="" Pos="5" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1178" ColName="Sexo" PrevColName="" Pos="6" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1179" ColName="Email" PrevColName="" Pos="7" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1180" ColName="Data_Cadastro" PrevColName="" Pos="8" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1380" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1229" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1172" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1171" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1231" IndexName="Cliente_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1229">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1230" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1153" Tablename="Produto" PrevTableName="Table_02" XPos="1151" YPos="84" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="3" >
+<COLUMNS>
+<COLUMN ID="1203" ColName="Codigo_peca" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1435" ColName="Maca_Codigo_Marca" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1251" ColName="Cor_Codigo_Cor" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1205" ColName="Nome_peca" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1324" ColName="Qntd" PrevColName="" Pos="4" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1443" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1250" />
+<RELATION_END ID="1434" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1204" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1203" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1252" IndexName="Pe\231a_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1250">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1251" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1436" IndexName="Produto_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1434">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1435" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1154" Tablename="Funcion\225rio" PrevTableName="Table_03" XPos="763" YPos="465" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="4" >
+<COLUMNS>
+<COLUMN ID="1207" ColName="Codigo_funcionario" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1236" ColName="Endere\231o_Codigo_Endereco" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1209" ColName="Nome_funcionario" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1210" ColName="RG_Funcionario" PrevColName="" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1211" ColName="CPF_Funcionario" PrevColName="" Pos="3" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1212" ColName="Telefone_Celular" PrevColName="" Pos="4" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1213" ColName="Telefone_Residencial" PrevColName="" Pos="5" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1377" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1235" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1208" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1207" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1237" IndexName="Funcion\225rio_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1235">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1236" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1156" Tablename="Carro" PrevTableName="Table_05" XPos="1603" YPos="475" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="6" >
+<COLUMNS>
+<COLUMN ID="1194" ColName="Codigo_Carro" PrevColName="Placa_Carro" Pos="0" idDatatype="4" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1450" ColName="Placa_Carro" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1261" ColName="Maca_Codigo_Marca" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1248" ColName="Cor_Codigo_Cor" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1392" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1247" />
+<RELATION_END ID="1260" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1195" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1194" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1249" IndexName="Carro_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1247">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1248" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1262" IndexName="Carro_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1260">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1261" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1157" Tablename="Fornecedor" PrevTableName="Table_06" XPos="761" YPos="132" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="7" >
+<COLUMNS>
+<COLUMN ID="1215" ColName="Codigo_Fornecedor" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1239" ColName="Endere\231o_Codigo_Endereco" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1217" ColName="Nome_Fornecedor" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1218" ColName="CNPJ" PrevColName="" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1219" ColName="Telefone_Comercial" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1315" ColName="Nome_Vendedor" PrevColName="" Pos="5" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1398" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1238" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1216" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1215" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1240" IndexName="Fornecedor_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1238">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1239" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1158" Tablename="Endere\231o" PrevTableName="Table_07" XPos="419" YPos="465" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="8" >
+<COLUMNS>
+<COLUMN ID="1186" ColName="Codigo_Endereco" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1245" ColName="Cidade_Codigo_Cidade" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1188" ColName="Rua" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1189" ColName="CEP" PrevColName="" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1190" ColName="Bairro" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1191" ColName="Numero_Casa" PrevColName="" Pos="4" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1192" ColName="Complemento" PrevColName="" Pos="5" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1229" />
+<RELATION_START ID="1235" />
+<RELATION_START ID="1238" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1244" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1187" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1186" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1246" IndexName="Endere\231o_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1244">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1245" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1166" Tablename="Cor" PrevTableName="Table_08" XPos="1495" YPos="197" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="9" >
+<COLUMNS>
+<COLUMN ID="1199" ColName="Codigo_Cor" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1201" ColName="Nome_Cor" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1247" />
+<RELATION_START ID="1250" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1200" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1199" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1168" Tablename="Cidade" PrevTableName="Table_09" XPos="68" YPos="499" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="10" >
+<COLUMNS>
+<COLUMN ID="1182" ColName="Codigo_Cidade" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1337" ColName="Estado_Codigo_estado" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1184" ColName="Nome_Cidade" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1244" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1336" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1183" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1182" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1338" IndexName="Cidade_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1336">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1337" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1253" Tablename="Maca" PrevTableName="Table_10" XPos="1596" YPos="41" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="17" >
+<COLUMNS>
+<COLUMN ID="1255" ColName="Codigo_Marca" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1257" ColName="Nome_Marca" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1260" />
+<RELATION_START ID="1418" />
+<RELATION_START ID="1434" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1256" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1255" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1331" Tablename="Estado" PrevTableName="Table_13" XPos="89" YPos="356" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="19" >
+<COLUMNS>
+<COLUMN ID="1333" ColName="Codigo_estado" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1335" ColName="Nome_estado" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1336" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1334" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1333" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1339" Tablename="Ordem_servico" PrevTableName="Table_14" XPos="1185" YPos="936" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="21" >
+<COLUMNS>
+<COLUMN ID="1341" ColName="Codigo_OS" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1451" ColName="Carro_Codigo_Carro" PrevColName="" Pos="1" idDatatype="4" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1381" ColName="Cliente_Codigo_Cliente" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1403" ColName="Data_OS" PrevColName="" Pos="3" idDatatype="20" DatatypeParams="(45)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1440" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1380" />
+<RELATION_END ID="1392" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1342" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1341" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1382" IndexName="Ordem_servico_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1380">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1381" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1394" IndexName="Ordem_servico_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1392">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1451" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1360" Tablename="Servico" PrevTableName="Table_16" XPos="793" YPos="696" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" >
+<COLUMNS>
+<COLUMN ID="1362" ColName="Codigo_Servico" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1364" ColName="Nome_servico" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1370" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1363" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1362" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1369" Tablename="Itens_Ordem_servico" PrevTableName="Servico_has_Ordem_servico" XPos="1179" YPos="569" TableType="0" TablePrefix="0" nmTable="1" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="27" >
+<COLUMNS>
+<COLUMN ID="1372" ColName="Servico_Codigo_Servico" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1441" ColName="Ordem_servico_Codigo_OS" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1399" ColName="Fornecedor_Codigo_Fornecedor" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1378" ColName="Funcion\225rio_Codigo_funcionario" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1446" />
+</RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1370" />
+<RELATION_END ID="1377" />
+<RELATION_END ID="1398" />
+<RELATION_END ID="1440" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1376" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1372" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1373" IndexName="Servico_has_Ordem_servico_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1370">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1372" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1379" IndexName="Servico_has_Ordem_servico_FKIndex3" IndexKind="1" FKRefDef_Obj_id="1377">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1378" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1400" IndexName="Servico_has_Ordem_servico_FKIndex5" IndexKind="1" FKRefDef_Obj_id="1398">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1399" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1442" IndexName="Itens_Ordem_servico_FKIndex4" IndexKind="1" FKRefDef_Obj_id="1440">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1441" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1404" Tablename="Modelo" PrevTableName="Table_14" XPos="1969" YPos="125" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" >
+<COLUMNS>
+<COLUMN ID="1406" ColName="Codigo_Modelo" PrevColName="Codigo_marca" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1419" ColName="Maca_Codigo_Marca" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1408" ColName="Nome_Modelo" PrevColName="Nome" Pos="1" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1414" ColName="Ano_Modelo" PrevColName="" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="1418" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1407" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1406" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1420" IndexName="Modelo_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1418">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1419" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1421" Tablename="Relacao_Itens_Ordem" PrevTableName="Ordem_servico_has_Itens_Ordem_servico" XPos="1156" YPos="340" TableType="0" TablePrefix="0" nmTable="1" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" >
+<COLUMNS>
+<COLUMN ID="1433" ColName="Codigo_Relacao" PrevColName="" Pos="2" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1447" ColName="Itens_Ordem_servico_Servico_Codigo_Servico" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1444" ColName="Produto_Codigo_peca" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="1443" />
+<RELATION_END ID="1446" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="1428" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1433" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1445" IndexName="Relacao_Itens_Ordem_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1443">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1444" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1448" IndexName="Relacao_Itens_Ordem_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1446">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1447" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+</TABLES>
+<RELATIONS>
+<RELATION ID="1229" RelationName="Rel_04" Kind="2" SrcTable="1158" DestTable="1152" FKFields="Codigo_Endereco=Endere\231o_Codigo_Endereco\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="26" CaptionOffsetY="-48" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1231" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="12" />
+<RELATION ID="1235" RelationName="Rel_06" Kind="2" SrcTable="1158" DestTable="1154" FKFields="Codigo_Endereco=Endere\231o_Codigo_Endereco\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="1" CaptionOffsetY="-11" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1237" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="14" />
+<RELATION ID="1238" RelationName="Rel_07" Kind="2" SrcTable="1158" DestTable="1157" FKFields="Codigo_Endereco=Endere\231o_Codigo_Endereco\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="28" CaptionOffsetY="-9" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1240" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="15" />
+<RELATION ID="1244" RelationName="Rel_09" Kind="2" SrcTable="1168" DestTable="1158" FKFields="Codigo_Cidade=Cidade_Codigo_Cidade\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="7" CaptionOffsetY="-42" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1246" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="14" />
+<RELATION ID="1247" RelationName="Rel_10" Kind="2" SrcTable="1166" DestTable="1156" FKFields="Codigo_Cor=Cor_Codigo_Cor\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-9" CaptionOffsetY="-11" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1249" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="15" />
+<RELATION ID="1250" RelationName="Rel_11" Kind="2" SrcTable="1166" DestTable="1153" FKFields="Codigo_Cor=Cor_Codigo_Cor\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-1" CaptionOffsetY="-53" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1252" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="16" />
+<RELATION ID="1260" RelationName="Rel_12" Kind="2" SrcTable="1253" DestTable="1156" FKFields="Codigo_Marca=Maca_Codigo_Marca\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="8" CaptionOffsetY="-11" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1262" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="18" />
+<RELATION ID="1336" RelationName="Rel_15" Kind="2" SrcTable="1331" DestTable="1168" FKFields="Codigo_estado=Estado_Codigo_estado\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="29" CaptionOffsetY="-26" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1338" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="20" />
+<RELATION ID="1370" RelationName="Rel_22" Kind="1" SrcTable="1360" DestTable="1369" FKFields="Codigo_Servico=Servico_Codigo_Servico\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-28" CaptionOffsetY="16" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1373" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
+<RELATION ID="1377" RelationName="Rel_24" Kind="2" SrcTable="1154" DestTable="1369" FKFields="Codigo_funcionario=Funcion\225rio_Codigo_funcionario\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="5" CaptionOffsetY="-12" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1379" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
+<RELATION ID="1380" RelationName="Rel_25" Kind="2" SrcTable="1152" DestTable="1339" FKFields="Codigo_Cliente=Cliente_Codigo_Cliente\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="26" CaptionOffsetY="60" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1382" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
+<RELATION ID="1392" RelationName="Rel_19" Kind="2" SrcTable="1156" DestTable="1339" FKFields="Codigo_Carro=Carro_Codigo_Carro\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-25" CaptionOffsetY="-4" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1394" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
+<RELATION ID="1398" RelationName="Rel_21" Kind="2" SrcTable="1157" DestTable="1369" FKFields="Codigo_Fornecedor=Fornecedor_Codigo_Fornecedor\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="28" CaptionOffsetY="102" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1400" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
+<RELATION ID="1418" RelationName="Rel_17" Kind="2" SrcTable="1253" DestTable="1404" FKFields="Codigo_Marca=Maca_Codigo_Marca\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-12" CaptionOffsetY="39" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1420" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
+<RELATION ID="1434" RelationName="Rel_18" Kind="2" SrcTable="1253" DestTable="1153" FKFields="Codigo_Marca=Maca_Codigo_Marca\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1436" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
+<RELATION ID="1440" RelationName="Rel_20" Kind="2" SrcTable="1339" DestTable="1369" FKFields="Codigo_OS=Ordem_servico_Codigo_OS\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1442" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
+<RELATION ID="1443" RelationName="Rel_21" Kind="2" SrcTable="1153" DestTable="1421" FKFields="Codigo_peca=Produto_Codigo_peca\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1445" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
+<RELATION ID="1446" RelationName="Rel_22" Kind="2" SrcTable="1369" DestTable="1421" FKFields="Servico_Codigo_Servico=Itens_Ordem_servico_Servico_Codigo_Servico\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1448" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
+</RELATIONS>
+<NOTES>
+</NOTES>
+<IMAGES>
+</IMAGES>
+</METADATA>
+<PLUGINDATA>
+<PLUGINDATARECORDS>
+</PLUGINDATARECORDS>
+</PLUGINDATA>
+<QUERYDATA>
+<QUERYRECORDS>
+</QUERYRECORDS>
+</QUERYDATA>
+<LINKEDMODELS>
+</LINKEDMODELS>
+</DBMODEL>
