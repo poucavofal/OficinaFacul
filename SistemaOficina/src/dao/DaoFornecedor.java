@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
 
 public class DaoFornecedor {
     public Fornecedor fornecedor;
-    private static String SQLINCLUIR = "INSERT INTO CLIENTE (?,?,?,?,?,?,?,?,?,?";
-    private static String SQLALTERAR = "UPDATE CLIENTE SET NOME_FUNCIONARIO = ?, TELEFONE_CELULAR = ?,"
-            + "TELEFONE_RESIDENCIAL = ?,RG_FUNCIONARIO = ?, CPF_FUNCIONARIO = ?, ENDERECO_FUNCIONARIO = ?, "
-            + "NUM_CASA = ?, BAIRRO_FUNCIONARIO = ?,CODIGO_CIDADE = ?, CEP = ? WHERE CODIGO_FUNCIONARIO = ?";
-    private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_FUNCIONARIO = ?";
-    private static String SQLCONSULTAR = "SELECT * FOM CLIENTE WHERE CODIGO_FUNCIONARIO = ?";
+    private static String SQLINCLUIR = "INSERT INTO FORNECEDOR (?,?,?,?,?,?,?,?,?,?,?,?)";
+    private static String SQLALTERAR = "UPDATE CLIENTE SET NOME_FORNECEDOR = ?, TELEFONE_COMERCIAL = ?,"
+            + "NOME_VENDEDOR = ?,TELEFONE_CELULAR = ?, EMAIL_FORNECEDOR = ?, CNPJ = ?, "
+            + "ENDERECO = ?, NUM_ESTABE = ?,BAIRRO = ?, CEP = ?,CODIGO_CIDADE = ? WHERE CODIGO_FORNECEDOR = ?";
+    private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_FORNECEDOR = ?";
+    private static String SQLCONSULTAR = "SELECT * FOM CLIENTE WHERE CODIGO_FORNECEDOR = ?";
     
     public DaoFornecedor(Fornecedor fornecedor){
         this.fornecedor = fornecedor;
@@ -23,17 +23,18 @@ public class DaoFornecedor {
     public boolean incluir(){
             try {
                 PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLINCLUIR);
-                ps.setInt(   1, funcionario.getCodigo_Funcionario());
-                ps.setString(2, funcionario.getNome_Funcionario());
-                ps.setString(3, funcionario.getTelefone_Celular());
-                ps.setString(4, funcionario.getTelefone_Residencial());
-                ps.setString(5, funcionario.getRG_Funcionario());
-                ps.setString(6, funcionario.getCPF_Funcionario());
-                ps.setString(7, funcionario.getEndereco_Funcionario());
-                ps.setString(8, funcionario.getNum_Casa());
-                ps.setString(9, funcionario.getBairro_Funcionario());
-                ps.setInt(   10, funcionario.getCodigo_Cidade());
-                ps.setString(11, funcionario.getCep());
+                ps.setInt(   1, fornecedor.getCodigo_Fornecedor());
+                ps.setString(2, fornecedor.getNome_Fornecedor());
+                ps.setString(3, fornecedor.getTelefone_Comercial());
+                ps.setString(4, fornecedor.getNome_Vendedor());
+                ps.setString(5, fornecedor.getTelefone_Celular());
+                ps.setString(6, fornecedor.getEmail_Fornecedor());
+                ps.setString(7, fornecedor.getCNPJ());
+                ps.setString(8, fornecedor.getEndereco());
+                ps.setString(9, fornecedor.getNum_Estabe());
+                ps.setString(10, fornecedor.getBairro());
+                ps.setString(11, fornecedor.getCep());
+                ps.setInt(12, fornecedor.getCodigo_Cidade());
                 return true;
             } catch (SQLException ex) {
                 
@@ -46,22 +47,24 @@ public class DaoFornecedor {
     public boolean alterar() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLALTERAR);
-                ps.setString(1, funcionario.getNome_Funcionario());
-                ps.setString(2, funcionario.getTelefone_Celular());
-                ps.setString(3, funcionario.getTelefone_Residencial());
-                ps.setString(4, funcionario.getRG_Funcionario());
-                ps.setString(5, funcionario.getCPF_Funcionario());
-                ps.setString(6, funcionario.getEndereco_Funcionario());
-                ps.setString(7, funcionario.getNum_Casa());
-                ps.setString(8, funcionario.getBairro_Funcionario());
-                ps.setInt(   9, funcionario.getCodigo_Cidade());
-                ps.setString(10, funcionario.getCep());
-                ps.setInt(   11, funcionario.getCodigo_Funcionario());
+              
+                ps.setString(1, fornecedor.getNome_Fornecedor());
+                ps.setString(2, fornecedor.getTelefone_Comercial());
+                ps.setString(3, fornecedor.getNome_Vendedor());
+                ps.setString(4, fornecedor.getTelefone_Celular());
+                ps.setString(5, fornecedor.getEmail_Fornecedor());
+                ps.setString(6, fornecedor.getCNPJ());
+                ps.setString(7, fornecedor.getEndereco());
+                ps.setString(8, fornecedor.getNum_Estabe());
+                ps.setString(9, fornecedor.getBairro());
+                ps.setString(10, fornecedor.getCep());
+                ps.setInt(11, fornecedor.getCodigo_Cidade());
+                  ps.setInt(   1, fornecedor.getCodigo_Fornecedor());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível alterar o funcionario.");
+            JOptionPane.showMessageDialog(null, "Não foi possível alterar o fornecedor.");
             return false;
         }
     }
@@ -69,12 +72,12 @@ public class DaoFornecedor {
     public boolean excluir() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLEXCLUIR);
-            ps.setInt(1, funcionario.getCodigo_Funcionario());
+            ps.setInt(1, fornecedor.getCodigo_Fornecedor());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível excluir o funcionario.");
+            JOptionPane.showMessageDialog(null, "Não foi possível excluir o fornecedor.");
             return false;
         }
     }
@@ -82,17 +85,17 @@ public class DaoFornecedor {
     public boolean consultar() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLCONSULTAR);
-            ps.setInt(1, funcionario.getCodigo_Funcionario());
+            ps.setInt(1, fornecedor.getCodigo_Fornecedor());
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                funcionario.setNome_Funcionario(rs.getString(2));
+                fornecedor.setNome_Fornecedor(rs.getString(2));
             } else {
-                JOptionPane.showMessageDialog(null, "funcionario não encontrado.");
+                JOptionPane.showMessageDialog(null, "fornecedor não encontrado.");
             }
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível consultar o funcionario.");
+            JOptionPane.showMessageDialog(null, "Não foi possível consultar o fornecedor.");
             return false;
         }
     }

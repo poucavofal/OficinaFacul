@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class DaoFuncionario {
     
     public Funcionario funcionario;
-    private static String SQLINCLUIR = "INSERT INTO CLIENTE (?,?,?,?,?,?,?,?,?,?";
+    private static String SQLINCLUIR = "INSERT INTO FUNCIONARIO (?,?,?,?,?,?,?,?,?,?)";
     private static String SQLALTERAR = "UPDATE CLIENTE SET NOME_FUNCIONARIO = ?, TELEFONE_CELULAR = ?,"
             + "TELEFONE_RESIDENCIAL = ?,RG_FUNCIONARIO = ?, CPF_FUNCIONARIO = ?, ENDERECO_FUNCIONARIO = ?, "
             + "NUM_CASA = ?, BAIRRO_FUNCIONARIO = ?,CODIGO_CIDADE = ?, CEP = ? WHERE CODIGO_FUNCIONARIO = ?";
