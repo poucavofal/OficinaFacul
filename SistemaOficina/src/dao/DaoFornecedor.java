@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
 public class DaoFornecedor {
     public Fornecedor fornecedor;
     private static String SQLINCLUIR = "INSERT INTO FORNECEDOR (?,?,?,?,?,?,?,?,?,?,?,?)";
-    private static String SQLALTERAR = "UPDATE CLIENTE SET NOME_FORNECEDOR = ?, TELEFONE_COMERCIAL = ?,"
+    private static String SQLALTERAR = "UPDATE FORNECEDOR SET NOME_FORNECEDOR = ?, TELEFONE_COMERCIAL = ?,"
             + "NOME_VENDEDOR = ?,TELEFONE_CELULAR = ?, EMAIL_FORNECEDOR = ?, CNPJ = ?, "
             + "ENDERECO = ?, NUM_ESTABE = ?,BAIRRO = ?, CEP = ?,CODIGO_CIDADE = ? WHERE CODIGO_FORNECEDOR = ?";
-    private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_FORNECEDOR = ?";
-    private static String SQLCONSULTAR = "SELECT * FOM CLIENTE WHERE CODIGO_FORNECEDOR = ?";
+    private static String SQLEXCLUIR = "DELETE FROM FORNECEDOR WHERE CODIGO_FORNECEDOR = ?";
+    private static String SQLCONSULTAR = "SELECT * FOM FORNECEDOR WHERE CODIGO_FORNECEDOR = ?";
     
     public DaoFornecedor(Fornecedor fornecedor){
         this.fornecedor = fornecedor;
@@ -59,8 +59,8 @@ public class DaoFornecedor {
                 ps.setString(9, fornecedor.getBairro());
                 ps.setString(10, fornecedor.getCep());
                 ps.setInt(11, fornecedor.getCodigo_Cidade());
-                  ps.setInt(   1, fornecedor.getCodigo_Fornecedor());
-            ps.executeUpdate();
+                ps.setInt(   1, fornecedor.getCodigo_Fornecedor());
+                ps.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();

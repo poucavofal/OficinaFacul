@@ -56,6 +56,7 @@ public class DaoCliente {
                 ps.setString(12, cliente.getBairro());
                 ps.setString(13, cliente.getCep());
                 ps.setInt(   14, cliente.getCodigo_Cidade());
+                ps.executeUpdate();
                 return true;
             } catch (SQLException ex) {
                 

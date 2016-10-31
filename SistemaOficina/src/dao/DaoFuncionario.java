@@ -36,6 +36,7 @@ public class DaoFuncionario {
                 ps.setString(9, funcionario.getBairro_Funcionario());
                 ps.setInt(   10, funcionario.getCodigo_Cidade());
                 ps.setString(11, funcionario.getCep());
+                ps.executeUpdate();
                 return true;
             } catch (SQLException ex) {
                 
