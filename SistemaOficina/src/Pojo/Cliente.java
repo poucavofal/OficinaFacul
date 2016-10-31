@@ -7,12 +7,16 @@ public class Cliente {
     private String  Nome_Cliente;
     private String  Telefone_Celular;
     private String  Telefone_Residencial;
-    private int     Cpf_Cliente;
-    private int     RG_Cliente;
     private String  Sexo_Cliente;
     private String  Email_Cliente;
     private String  Data_Cadastro;
-    private int     Codigo_Endereco;
+    private String  RG_Cliente;
+    private String  CPF_Cliente;
+    private String  Endereco;
+    private String  Num_Casa;
+    private String  Bairro;
+    private String  Cep;
+    private int     Codigo_Cidade;
 
     public int getCodigo_Cliente() {
         return Codigo_Cliente;
@@ -46,22 +50,6 @@ public class Cliente {
         this.Telefone_Residencial = Telefone_Residencial;
     }
 
-    public int getCpf_Cliente() {
-        return Cpf_Cliente;
-    }
-
-    public void setCpf_Cliente(int Cpf_Cliente) {
-        this.Cpf_Cliente = Cpf_Cliente;
-    }
-
-    public int getRG_Cliente() {
-        return RG_Cliente;
-    }
-
-    public void setRG_Cliente(int RG_Cliente) {
-        this.RG_Cliente = RG_Cliente;
-    }
-
     public String getSexo_Cliente() {
         return Sexo_Cliente;
     }
@@ -86,17 +74,61 @@ public class Cliente {
         this.Data_Cadastro = Data_Cadastro;
     }
 
-    public int getCodigo_Endereco() {
-        return Codigo_Endereco;
+    public String getRG_Cliente() {
+        return RG_Cliente;
     }
 
-    public void setCodigo_Endereco(int Codigo_Endereco) {
-        this.Codigo_Endereco = Codigo_Endereco;
+    public void setRG_Cliente(String RG_Cliente) {
+        this.RG_Cliente = RG_Cliente;
     }
+
+    public String getCPF_Cliente() {
+        return CPF_Cliente;
+    }
+
+    public void setCPF_Cliente(String CPF_Cliente) {
+        this.CPF_Cliente = CPF_Cliente;
+    }
+
+    public String getEndereco() {
+        return Endereco;
+    }
+
+    public void setEndereco(String Endereco) {
+        this.Endereco = Endereco;
+    }
+
+    public String getNum_Casa() {
+        return Num_Casa;
+    }
+
+    public void setNum_Casa(String Num_Casa) {
+        this.Num_Casa = Num_Casa;
+    }
+
+    public String getBairro() {
+        return Bairro;
+    }
+
+    public void setBairro(String Bairro) {
+        this.Bairro = Bairro;
+    }
+
+    public String getCep() {
+        return Cep;
+    }
+
+    public void setCep(String Cep) {
+        this.Cep = Cep;
+    }
+
+    public int getCodigo_Cidade() {
+        return Codigo_Cidade;
+    }
+
+    public void setCodigo_Cidade(int Codigo_Cidade) {
+        this.Codigo_Cidade = Codigo_Cidade;
+    }
+
+    
 }
-
-
-
-    
-    
-   

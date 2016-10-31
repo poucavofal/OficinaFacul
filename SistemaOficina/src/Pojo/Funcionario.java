@@ -9,6 +9,11 @@ public class Funcionario {
     private String  Telefone_Residencial;
     private String  RG_Funcionario;
     private String  CPF_Funcionario;
+    private String  Endereco_Funcionario;
+    private String  Num_Casa;
+    private String  Bairro_Funcionario;
+    private int     Codigo_Cidade;
+    private String  Cep;
 
     public int getCodigo_Funcionario() {
         return Codigo_Funcionario;
@@ -57,5 +62,46 @@ public class Funcionario {
     public void setCPF_Funcionario(String CPF_Funcionario) {
         this.CPF_Funcionario = CPF_Funcionario;
     }
+
+    public String getEndereco_Funcionario() {
+        return Endereco_Funcionario;
+    }
+
+    public void setEndereco_Funcionario(String Endereco_Funcionario) {
+        this.Endereco_Funcionario = Endereco_Funcionario;
+    }
+
+    public String getNum_Casa() {
+        return Num_Casa;
+    }
+
+    public void setNum_Casa(String Num_Casa) {
+        this.Num_Casa = Num_Casa;
+    }
+
+    public String getBairro_Funcionario() {
+        return Bairro_Funcionario;
+    }
+
+    public void setBairro_Funcionario(String Bairro_Funcionario) {
+        this.Bairro_Funcionario = Bairro_Funcionario;
+    }
+
+    public int getCodigo_Cidade() {
+        return Codigo_Cidade;
+    }
+
+    public void setCodigo_Cidade(int Codigo_Cidade) {
+        this.Codigo_Cidade = Codigo_Cidade;
+    }
+
+    public String getCep() {
+        return Cep;
+    }
+
+    public void setCep(String Cep) {
+        this.Cep = Cep;
+    }
+
     
 }
