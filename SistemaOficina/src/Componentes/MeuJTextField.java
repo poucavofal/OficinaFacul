@@ -14,7 +14,7 @@ import javax.swing.JTextField;
  *
  * @author Jean
  */
-public class MeuJTextField extends JTextField implements FocusListener {
+public class MeuJTextField extends JTextField implements FocusListener, MeuComponente {
     public String dica;
     
     public MeuJTextField (int tamanho, String dica){

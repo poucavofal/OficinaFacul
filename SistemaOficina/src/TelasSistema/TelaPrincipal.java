@@ -4,6 +4,7 @@ package TelasSistema;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -11,6 +12,7 @@ import javax.swing.JMenuItem;
 
 
 public class TelaPrincipal extends JFrame implements ActionListener{
+    public JDesktopPane jdp = new JDesktopPane();
     public JMenuBar menu = new JMenuBar();//Cria a barra de menu do sistema.
     public JMenu jmCadastros = new JMenu("Cadastros");//cria o item de menu.
     public JMenu jmOS = new JMenu("Serviço");//cria o item de menu.
@@ -28,6 +30,7 @@ public TelaPrincipal(){
     setTitle("Oficina do Malandro");//Coloca o Titulo na tela do sistema.
     setExtendedState(MAXIMIZED_BOTH);//Maximisa a tela do sitema.
     setDefaultCloseOperation(EXIT_ON_CLOSE);//Fecha o programa por completo.
+    getContentPane().add(jdp);
     setJMenuBar(menu);//seta a barra de menu na tela do sistema.
     setVisible(true);//Torna a tela do sistema visivel.
     menu.add(jmCadastros);//adiciona o item cadastro na barra de menu.
@@ -57,34 +60,43 @@ public TelaPrincipal(){
         //cadastro de Cliente.
         if (e.getSource()== jmiCadastroCliente){
             TelaCadastroCliente telaCadastroCliente = new TelaCadastroCliente(); 
+            jdp.add(telaCadastroCliente);
         }
         //Quando o subitem CadastroFornecedor for Clicado executa a ação chamando a tela de 
         //cadastro de Fornecedor.
         else if (e.getSource()== jmiCadastroFornecedor){
             TelaCadastroFornecedor telaCadastroFornecedor = new TelaCadastroFornecedor(); 
+            jdp.add(telaCadastroFornecedor);
         }
         //Quando o subitem CadastroProduto for Clicado executa a ação chamando a tela de 
         //cadastro de Produto.
         else if (e.getSource()== jmiCadastroProduto){
             TelaCadastroProduto telaCadastroProduto = new TelaCadastroProduto(); 
+            jdp.add(telaCadastroProduto);
         }
         else if (e.getSource()== jmiCadastroFuncionario){
             TelaCadastroFuncionario telaCadastroFuncionario = new TelaCadastroFuncionario(); 
+            jdp.add(telaCadastroFuncionario);
         }
         else if (e.getSource()== jmiCadastroCidade){
-            TelaCadastroCidade telaCadastroCidade = new TelaCadastroCidade(); 
+            TelaCadastroCidade telaCadastroCidade = new TelaCadastroCidade();
+            jdp.add(telaCadastroCidade);
         }
         else if (e.getSource()== jmiCadastroEstado){
             TelaCadastroEstado telaCadastroEstado = new TelaCadastroEstado(); 
+            jdp.add(telaCadastroEstado);
         }
         else if (e.getSource()== jmiCadastroServico){
             TelaCadastroServico telaCadastroServico = new TelaCadastroServico(); 
+            jdp.add(telaCadastroServico);
         }
          else if (e.getSource()== jmiOS){
-            TelaOrdemServico telaCadastroServico = new TelaOrdemServico(); 
+            TelaOrdemServico telaCadastroServico = new TelaOrdemServico();
+            jdp.add(telaCadastroServico);
         }
          else if (e.getSource()== jmiCadastroCor){
             TelaCor telaCor = new TelaCor(); 
+            jdp.add(telaCor);
         }
     }
 }

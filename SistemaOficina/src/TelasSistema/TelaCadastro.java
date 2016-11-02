@@ -3,6 +3,7 @@ package TelasSistema;
 
 import Componentes.MeuJTextField;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -11,11 +12,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 
-public class TelaCadastro extends JFrame implements ActionListener {
+public class TelaCadastro extends JInternalFrame implements ActionListener {
     public final int PADRAO = 0;
     public final int INCLUINDO = 1;
     public final int ALTERANDO = 2;
@@ -33,7 +39,7 @@ public class TelaCadastro extends JFrame implements ActionListener {
     
     
     public TelaCadastro(String titulo){
-    setTitle(titulo);
+    super(titulo, false, true, false, true);
     getContentPane().setLayout(new BorderLayout());
     setVisible(true);
     getContentPane().add("West", jpComponentes);
@@ -123,5 +129,6 @@ public class TelaCadastro extends JFrame implements ActionListener {
     public void cancelar(){
         estadoTela = PADRAO;
         habilitaBotoes();
-    }
+    }  
 }
+
