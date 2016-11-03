@@ -1,25 +1,22 @@
 
 package TelasSistema;
 
+import Componentes.MeuComponente;
 import Componentes.MeuJTextField;
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-
 
 public class TelaCadastro extends JInternalFrame implements ActionListener {
     public final int PADRAO = 0;
@@ -28,15 +25,16 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     public final int EXCLUINDO = 3;
     public final int CONSULTANDO = 4;
     public int estadoTela = PADRAO;
-    public JPanel jpComponentes = new JPanel();
-    public JPanel jpbotao = new JPanel();
+    public boolean temDadosNaTela = false;
     public JButton jbIncluir = new JButton("Incluir"); 
     public JButton jbAlterar = new JButton("Altear"); 
     public JButton jbExcluir = new JButton("Excluir");
     public JButton jbConsultar = new JButton("Consultar");
     public JButton jbConfirmar = new JButton("Confirmar");
     public JButton jbCancelar = new JButton ("Cancelar");
-    
+    public JPanel jpComponentes = new JPanel();
+    public JPanel jpbotao = new JPanel();
+    public List<MeuComponente> componentes = new ArrayList();
     
     public TelaCadastro(String titulo){
     super(titulo, false, true, false, true);
@@ -66,6 +64,38 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         jpComponentes.add(componente, gbc);
     }
     
+    public void habilitaComponentes(boolean status) {
+        for (int i = 0; i < componentes.size(); i++) {
+            componentes.get(i).habilitar(status);
+        }
+    }
+    
+    public boolean validaComponentes() {
+        String errosObrigatorios = "", errosInvalidos = "", errosTotal = "";
+        for (int i = 0; i < componentes.size(); i++) {
+            if (componentes.get(i).eObrigatorio() && componentes.get(i).eVazio()) {
+                errosObrigatorios = errosObrigatorios + componentes.get(i).getDica() + "\n";
+            }
+            if (!componentes.get(i).eValido()) {
+                errosInvalidos = errosInvalidos + componentes.get(i).getDica() + "\n";
+            }
+        }
+        if (!errosObrigatorios.isEmpty()) {
+            errosTotal = "Os campos abaixo são obrigatórios e não foram preenchidos:\n\n"
+                    + errosObrigatorios;
+        }
+        if (!errosInvalidos.isEmpty()) {
+            errosTotal = errosTotal + "\n\n\n"
+                    + "Os campos abaixo estão inválidos:\n\n"
+                    + errosInvalidos;
+        }
+        if (!errosTotal.isEmpty()) {
+            JOptionPane.showMessageDialog(null, errosTotal);
+            return false;
+        }
+        return errosTotal.isEmpty();
+    }
+    
     public void adicionaBotao(JButton botao){
         jpbotao.add(botao);
         botao.addActionListener(this);
@@ -73,8 +103,8 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     
     public void habilitaBotoes(){
         jbIncluir.setEnabled(estadoTela == PADRAO);
-        jbAlterar.setEnabled(false);
-        jbExcluir.setEnabled(false);
+        jbAlterar.setEnabled(estadoTela == PADRAO && temDadosNaTela);
+        jbExcluir.setEnabled(estadoTela == PADRAO && temDadosNaTela);
         jbConsultar.setEnabled(estadoTela == PADRAO);
         jbConfirmar.setEnabled(estadoTela != PADRAO);
         jbCancelar.setEnabled(estadoTela != PADRAO);
@@ -104,31 +134,84 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     public void incluir(){
         estadoTela = INCLUINDO;
         habilitaBotoes();
-        
-    }
+        habilitaComponentes(true); 
+        }
+
     public void alterar(){
         estadoTela = ALTERANDO;
         habilitaBotoes();
-        
-    }
+        habilitaComponentes(true); 
+
+        }
     public void excluir(){
-        estadoTela = EXCLUINDO;
-        habilitaBotoes();
-        
-    }
-    public void consultar(){
-        estadoTela = CONSULTANDO;
-        habilitaBotoes();
-        
-    }
-    public void confirmar(){
+            estadoTela = EXCLUINDO;
+            habilitaBotoes();
+
+        }
+        public void consultar(){
+            estadoTela = CONSULTANDO;
+            habilitaBotoes();
+            habilitaComponentes(true); 
+
+        }
+        public void confirmar(){
+            if (estadoTela == INCLUINDO) {
+                if (!validaComponentes()) {
+                    return;
+                }
+                if (!incluirBD()) {
+                    return;
+                }
+                temDadosNaTela = true;
+            } else if (estadoTela == ALTERANDO) {
+                if (!validaComponentes()) {
+                    return;
+                }
+                if (!alterarBD()) {
+                    return;
+                }
+            } else if (estadoTela == EXCLUINDO) {
+                if (!excluirBD()) {
+                    return;
+                }
+                temDadosNaTela = false;
+            } else if (estadoTela == CONSULTANDO) {
+                if (!consultarBD()) {
+                    return;
+                }
+                temDadosNaTela = true;
+            }
+            estadoTela = PADRAO;
+            habilitaBotoes();
+            habilitaComponentes(false);
+        }
+
+        public void cancelar(){
         estadoTela = PADRAO;
         habilitaBotoes();
-        
+        habilitaComponentes(false);
+        } 
+    
+        public boolean incluirBD() {
+            return true;
+            //Método a ser redefinido nas sub-classes
+        }
+
+        public boolean alterarBD() {
+            return true;
+            //Método a ser redefinido nas sub-classes
+        }
+
+        public boolean excluirBD() {
+            return true;
+            //Método a ser redefinido nas sub-classes
+        }
+
+        public boolean consultarBD() {
+            return true;
+            //Método a ser redefinido nas sub-classes
+        }    
     }
-    public void cancelar(){
-        estadoTela = PADRAO;
-        habilitaBotoes();
-    }  
-}
+     
+
 

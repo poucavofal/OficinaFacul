@@ -5,12 +5,12 @@ import Componentes.MeuJTextField;
 
 
 public class TelaOrdemServico extends TelaCadastro {
-    public MeuJTextField campoCodigo = new MeuJTextField(10, " Codigo: ");
-    public MeuJTextField campoCliente = new MeuJTextField(15, " Cliente: ");
-    public MeuJTextField campoPlacaCarro = new MeuJTextField(10, " Placa: ");
-    public MeuJTextField campoMarca = new MeuJTextField(10, " Marca: ");
-    public MeuJTextField campoCor = new MeuJTextField(10, " Cor: ");
-    public MeuJTextField campoStatus = new MeuJTextField(10, " Data:");
+    public MeuJTextField campoCodigo = new MeuJTextField(true, 10, " Codigo: ");
+    public MeuJTextField campoCliente = new MeuJTextField(true, 15, " Cliente: ");
+    public MeuJTextField campoPlacaCarro = new MeuJTextField(true, 10, " Placa: ");
+    public MeuJTextField campoMarca = new MeuJTextField(true, 10, " Marca: ");
+    public MeuJTextField campoCor = new MeuJTextField(true, 10, " Cor: ");
+    public MeuJTextField campoStatus = new MeuJTextField(true, 10, " Data:");
     
     public TelaOrdemServico(){
         super("Ordem de serviço");

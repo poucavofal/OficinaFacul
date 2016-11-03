@@ -15,26 +15,54 @@ import javax.swing.JTextField;
  * @author Jean
  */
 public class MeuJTextField extends JTextField implements FocusListener, MeuComponente {
+    private boolean obrigatorio;
     public String dica;
     
-    public MeuJTextField (int tamanho, String dica){
+    public MeuJTextField (boolean obrigatorio, int tamanho, String dica){
+        this.obrigatorio = obrigatorio;
         this.dica = dica;
         setColumns (tamanho);
         addFocusListener(this);
+        focusLost(null);
     }
    
 
     public String getDica(){
         return dica;
-    }
+    }   
+    
+   public boolean eObrigatorio(){
+       return obrigatorio;
+   }
+   
+   public void habilitar(boolean status){
+       setEnabled(status);
+   }
+   
+   public boolean eVazio(){
+       return getText().trim().isEmpty();
+   }
+   
+   public boolean eValido(){
+       return true;
+   }
     
     @Override
-    public void focusGained(FocusEvent e) {//Foco quando vc esta clicado dentro do campo texto
-        setBackground(Color.yellow);//o campo fica amarelo quando vc esta com o cursor dentro
+    public void focusGained(FocusEvent e) {
+        setBackground(Color.yellow);
     }
 
     @Override
-    public void focusLost(FocusEvent e) {//Foco quando vc sai de dentro do campo texto
-        setBackground(Color.white);//o campo fica branco quando vc tira o foco dele
+    public void focusLost(FocusEvent e) {
+        if (eObrigatorio()){
+            setBackground(Color.white);
+        }else{
+            setBackground(Color.blue);
+        }
+        
+    }
+    @Override
+    public void Limpar() {
+        setText("");
     }
 }

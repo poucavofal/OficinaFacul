@@ -3,18 +3,18 @@ package TelasSistema;
 import Componentes.MeuJTextField;
 
 public class TelaCadastroFornecedor extends TelaCadastro{
-    public MeuJTextField campoCodigo = new MeuJTextField(10, "Codigo: ");
-    public MeuJTextField campoNome = new MeuJTextField(20, "Nome: ");
-    public MeuJTextField campoRG = new MeuJTextField(15, "CNPJ: ");
-    public MeuJTextField campoTelComer = new MeuJTextField(10, "Tel. Comercial: ");
-    public MeuJTextField campoEndereco = new MeuJTextField(14, "Endereço:");
-    public MeuJTextField campoNumero = new MeuJTextField(14, "Nº:");
-    public MeuJTextField campoBairro = new MeuJTextField(14, "Bairro:");
-    public MeuJTextField campoCEP = new MeuJTextField(14, "CEP:");
-    public MeuJTextField campoComplemento = new MeuJTextField(14, "Complemento:");
-    public MeuJTextField campoCidade = new MeuJTextField(14, "Cidade:");
-    public MeuJTextField campoEstado = new MeuJTextField(14, "Estado:");
-    public MeuJTextField campoNomeVendedor = new MeuJTextField(14, "Nome do Vendedor:");
+    public MeuJTextField campoCodigo = new MeuJTextField(false, 10, "Codigo: ");
+    public MeuJTextField campoNome = new MeuJTextField(false, 20, "Nome: ");
+    public MeuJTextField campoRG = new MeuJTextField(false, 15, "CNPJ: ");
+    public MeuJTextField campoTelComer = new MeuJTextField(false,10, "Tel. Comercial: ");
+    public MeuJTextField campoEndereco = new MeuJTextField(false,14, "Endereço:");
+    public MeuJTextField campoNumero = new MeuJTextField(false,14, "Nº:");
+    public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro:");
+    public MeuJTextField campoCEP = new MeuJTextField(false,14, "CEP:");
+    public MeuJTextField campoComplemento = new MeuJTextField(false,14, "Complemento:");
+    public MeuJTextField campoCidade = new MeuJTextField(false,14, "Cidade:");
+    public MeuJTextField campoEstado = new MeuJTextField(false,14, "Estado:");
+    public MeuJTextField campoNomeVendedor = new MeuJTextField(false, 14, "Nome do Vendedor:");
 
     public TelaCadastroFornecedor(){
         super ("Cadastro de Fornecedor");

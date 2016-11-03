@@ -1,4 +1,6 @@
-package componentes;
+
+package Componentes;
+
 
 public interface MeuComponente {
    public String getDica();    
@@ -6,4 +8,6 @@ public interface MeuComponente {
    public void habilitar(boolean status);
    public boolean eVazio();
    public boolean eValido();
-}
+   public void Limpar();
+} 
+

@@ -5,30 +5,28 @@
  */
 package TelasSistema;
 
+import Componentes.MeuCampoData;
 import Componentes.MeuJTextField;
 
 
-/**
- *
- * @author Jean
- */
+
 public class TelaCadastroCliente extends TelaCadastro {
-    public MeuJTextField campoCodigo = new MeuJTextField(10, "Código: ");
-    public MeuJTextField campoNome = new MeuJTextField(30, "Nome: ");
-    public MeuJTextField campoRG = new MeuJTextField(12, "RG:");
-    public MeuJTextField campoCPF = new MeuJTextField(14, "CPF:");
-    public MeuJTextField campoEndereco = new MeuJTextField(14, "Endereço:");
-    public MeuJTextField campoNCasa = new MeuJTextField(14, "Nº:");
-    public MeuJTextField campoBairro = new MeuJTextField(14, "Bairro:");
-    public MeuJTextField campoCEP = new MeuJTextField(14, "CEP:");
-    public MeuJTextField campoComplemento = new MeuJTextField(14, "Complemento:");
-    public MeuJTextField campoCidade = new MeuJTextField(14, "Cidade: ");
-    public MeuJTextField campoEstado = new MeuJTextField(14, "Estado: : ");
-    public MeuJTextField campoTelCel = new MeuJTextField(10, "Celular: ");
-    public MeuJTextField campoTelResi = new MeuJTextField(10, "Residencial: ");
-    public MeuJTextField campoSexo = new MeuJTextField(7, "Sexo: ");
-    public MeuJTextField campoEmail = new MeuJTextField(20, "E-mail: ");
-    public MeuJTextField campoDataCadastro = new MeuJTextField(10, "Data do Cadastro: ");
+    public MeuJTextField campoCodigo = new MeuJTextField(true, 10, "Código: ");
+    public MeuJTextField campoNome = new MeuJTextField(true,30, "Nome: ");
+    public MeuJTextField campoRG = new MeuJTextField(true,12, "RG:");
+    public MeuJTextField campoCPF = new MeuJTextField(true,14, "CPF:");
+    public MeuJTextField campoEndereco = new MeuJTextField(false, 14, "Endereço:");
+    public MeuJTextField campoNCasa = new MeuJTextField(false, 14, "Nº:");
+    public MeuJTextField campoBairro = new MeuJTextField(false, 14, "Bairro:");
+    public MeuJTextField campoCEP = new MeuJTextField(false, 14, "CEP:");
+    public MeuJTextField campoComplemento = new MeuJTextField(false, 14, "Complemento:");
+    public MeuJTextField campoCidade = new MeuJTextField(false, 14, "Cidade: ");
+    public MeuJTextField campoEstado = new MeuJTextField(false, 14, "Estado: : ");
+    public MeuJTextField campoTelCel = new MeuJTextField(false, 10, "Celular: ");
+    public MeuJTextField campoTelResi = new MeuJTextField(false, 10, "Residencial: ");
+    public MeuJTextField campoSexo = new MeuJTextField(false, 7, "Sexo: ");
+    public MeuJTextField campoEmail = new MeuJTextField(false, 20, "E-mail: ");
+    public MeuJTextField campoDataCadastro = new MeuJTextField(false,10, "Data do Cadastro: ");
     
     public TelaCadastroCliente(){
         super("Cadastro Cliente");

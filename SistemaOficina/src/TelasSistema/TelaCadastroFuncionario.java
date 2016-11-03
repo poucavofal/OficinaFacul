@@ -5,19 +5,19 @@ import Componentes.MeuJTextField;
 
 
 public class TelaCadastroFuncionario extends TelaCadastro {
-    public MeuJTextField campoCodigo = new MeuJTextField(10, "Codigo: ");
-    public MeuJTextField campoNome = new MeuJTextField(20, "Nome: ");
-    public MeuJTextField campoRG = new MeuJTextField(15, "RG: ");
-    public MeuJTextField campoCPF = new MeuJTextField(15, "CPF: ");
-    public MeuJTextField campoTelCel = new MeuJTextField(10, "Tel. Celular: ");
-    public MeuJTextField campoTelResi = new MeuJTextField(10, "Tel. Residencial: ");
-    public MeuJTextField campoEndereco = new MeuJTextField(14, "Endereço:");
-    public MeuJTextField campoNCasa = new MeuJTextField(14, "Nº:");
-    public MeuJTextField campoBairro = new MeuJTextField(14, "Bairro:");
-    public MeuJTextField campoCEP = new MeuJTextField(14, "CEP:");
-    public MeuJTextField campoComplemento = new MeuJTextField(14, "Complemento:");
-    public MeuJTextField campoCidade = new MeuJTextField(14, "Cidade:");
-    public MeuJTextField campoEstado = new MeuJTextField(14, "Estado:");
+    public MeuJTextField campoCodigo = new MeuJTextField(true, 10, "Codigo: ");
+    public MeuJTextField campoNome = new MeuJTextField(true, 20, "Nome: ");
+    public MeuJTextField campoRG = new MeuJTextField(true, 15, "RG: ");
+    public MeuJTextField campoCPF = new MeuJTextField(true, 15, "CPF: ");
+    public MeuJTextField campoTelCel = new MeuJTextField(false,10, "Tel. Celular: ");
+    public MeuJTextField campoTelResi = new MeuJTextField(false,10, "Tel. Residencial: ");
+    public MeuJTextField campoEndereco = new MeuJTextField(false,14, "Endereço:");
+    public MeuJTextField campoNCasa = new MeuJTextField(false,14, "Nº:");
+    public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro:");
+    public MeuJTextField campoCEP = new MeuJTextField(false,14, "CEP:");
+    public MeuJTextField campoComplemento = new MeuJTextField(false,14, "Complemento:");
+    public MeuJTextField campoCidade = new MeuJTextField(false,14, "Cidade:");
+    public MeuJTextField campoEstado = new MeuJTextField(false,14, "Estado:");
 
     public TelaCadastroFuncionario(){
         super("Cadastro Funcionario");
