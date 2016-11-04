@@ -14,12 +14,12 @@ public class TelaOrdemServico extends TelaCadastro {
     
     public TelaOrdemServico(){
         super("Ordem de serviço");
-        adicionaComponente(1, 1, campoCodigo);
-        adicionaComponente(1, 3, campoCliente);
-        adicionaComponente(1, 5, campoPlacaCarro);
-        adicionaComponente(2, 3, campoMarca);
-        adicionaComponente(2, 1, campoCor);
-        adicionaComponente(2, 5, campoStatus);
+        adicionaComponente(1, 1, 1 , 1, campoCodigo);
+        adicionaComponente(1, 3, 1 , 1, campoCliente);
+        adicionaComponente(1, 5, 1 , 1, campoPlacaCarro);
+        adicionaComponente(2, 3, 1 , 1, campoMarca);
+        adicionaComponente(2, 1, 1 , 1, campoCor);
+        adicionaComponente(2, 5, 1 , 1, campoStatus);
         pack();
     }
 }

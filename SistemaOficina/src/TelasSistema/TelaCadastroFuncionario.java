@@ -21,19 +21,19 @@ public class TelaCadastroFuncionario extends TelaCadastro {
 
     public TelaCadastroFuncionario(){
         super("Cadastro Funcionario");
-        adicionaComponente(1, 1, campoCodigo);
-        adicionaComponente(1, 3, campoNome);
-        adicionaComponente(2, 1, campoRG);
-        adicionaComponente(2, 3, campoCPF);
-        adicionaComponente(3, 1, campoTelCel);
-        adicionaComponente(3, 3, campoTelResi);
-        adicionaComponente(4, 1, campoEndereco);
-        adicionaComponente(4, 3, campoNCasa);
-        adicionaComponente(5, 1, campoBairro);
-        adicionaComponente(5, 3, campoCEP);
-        adicionaComponente(6, 1, campoComplemento);
-        adicionaComponente(6, 3, campoCidade);
-        adicionaComponente(7, 1, campoEstado);
+        adicionaComponente(1, 1, 1 , 1, campoCodigo);
+        adicionaComponente(1, 3, 1 , 1, campoNome);
+        adicionaComponente(2, 1, 1 , 1, campoRG);
+        adicionaComponente(2, 3, 1 , 1, campoCPF);
+        adicionaComponente(3, 1, 1 , 1, campoTelCel);
+        adicionaComponente(3, 3, 1 , 1, campoTelResi);
+        adicionaComponente(4, 1, 1 , 1, campoEndereco);
+        adicionaComponente(4, 3, 1 , 1, campoNCasa);
+        adicionaComponente(5, 1, 1 , 1, campoBairro);
+        adicionaComponente(5, 3, 1 , 1, campoCEP);
+        adicionaComponente(6, 1, 1 , 1, campoComplemento);
+        adicionaComponente(6, 3, 1 , 1, campoCidade);
+        adicionaComponente(7, 1, 1 , 1, campoEstado);
         pack();
     }
 }

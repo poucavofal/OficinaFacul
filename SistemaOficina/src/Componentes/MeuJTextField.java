@@ -49,15 +49,20 @@ public class MeuJTextField extends JTextField implements FocusListener, MeuCompo
     
     @Override
     public void focusGained(FocusEvent e) {
-        setBackground(Color.yellow);
+        if(eObrigatorio()){
+            setBackground(Color.white);
+
+        }else{
+            setBackground(Color.yellow);
+        }
     }
 
     @Override
     public void focusLost(FocusEvent e) {
         if (eObrigatorio()){
-            setBackground(Color.white);
+            setBackground(Color.yellow);
         }else{
-            setBackground(Color.blue);
+            setBackground(Color.white);
         }
         
     }

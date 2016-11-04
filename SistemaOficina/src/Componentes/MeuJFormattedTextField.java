@@ -44,7 +44,7 @@ public class MeuJFormattedTextField extends JFormattedTextField implements MeuCo
 
     @Override
     public void focusGained(FocusEvent fe) {
-        setBackground(Color.green);
+        setBackground(Color.white);
     }
 
     @Override

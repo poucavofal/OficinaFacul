@@ -40,7 +40,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     super(titulo, false, true, false, true);
     getContentPane().setLayout(new BorderLayout());
     setVisible(true);
-    getContentPane().add("West", jpComponentes);
+    getContentPane().add("Center", jpComponentes);
     getContentPane().add("South", jpbotao);
     jpComponentes.setLayout(new GridBagLayout());
     jpbotao.setLayout(new GridLayout(1,6));
@@ -53,15 +53,24 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     pack();
     habilitaBotoes();
 }
-    public void adicionaComponente(int linha, int coluna, JComponent componente){
+    public void adicionaComponente(int linha, int coluna, int linhas, int colunas,
+            JComponent componente) {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridy = linha;
         gbc.gridx = coluna;
+        gbc.gridheight = linhas;
+        gbc.gridwidth = colunas;
         gbc.anchor = GridBagConstraints.WEST;
-        JLabel label = new JLabel (((MeuJTextField) componente).getDica());
-        jpComponentes.add(label, gbc);
-        gbc.gridx++;
+        String texto = "<html><body>" + ((MeuComponente) componente).getDica();
+        if (((MeuComponente) componente).eObrigatorio()) {
+            texto = texto + "*";
+        }
+        texto = texto + ":</body></html>";
+        JLabel rotulo = new JLabel(texto);
+        jpComponentes.add(rotulo, gbc);
+        gbc.gridy++;
         jpComponentes.add(componente, gbc);
+        componentes.add((MeuComponente) componente);
     }
     
     public void habilitaComponentes(boolean status) {
@@ -163,6 +172,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
                     return;
                 }
                 temDadosNaTela = true;
+                estadoTela = PADRAO;
             } else if (estadoTela == ALTERANDO) {
                 if (!validaComponentes()) {
                     return;

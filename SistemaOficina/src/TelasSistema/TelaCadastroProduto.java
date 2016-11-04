@@ -11,10 +11,10 @@ public class TelaCadastroProduto extends TelaCadastro {
 
     public TelaCadastroProduto(){
         super("Cadastro de Produtos");
-        adicionaComponente(1, 1, campoCodigo);
-        adicionaComponente(1, 3, campoNomePeca);
-        adicionaComponente(2, 1, campoQtde);
-        adicionaComponente(2, 3, campoCor);
+        adicionaComponente(1, 1, 1 , 1, campoCodigo);
+        adicionaComponente(1, 3, 1 , 1, campoNomePeca);
+        adicionaComponente(2, 1, 1 , 1, campoQtde);
+        adicionaComponente(2, 3, 1 , 1, campoCor);
         pack();
     }
 }
