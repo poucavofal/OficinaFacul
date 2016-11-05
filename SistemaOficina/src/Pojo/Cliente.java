@@ -16,7 +16,9 @@ public class Cliente {
     private String  Num_Casa;
     private String  Bairro;
     private String  Cep;
+    private String Complemento;
     private int     Codigo_Cidade;
+    private String  Status;
 
     public int getCodigo_Cliente() {
         return Codigo_Cliente;
@@ -128,6 +130,21 @@ public class Cliente {
 
     public void setCodigo_Cidade(int Codigo_Cidade) {
         this.Codigo_Cidade = Codigo_Cidade;
+    }
+    
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+    public String getComplemento() {
+        return Complemento;
+    }
+
+    public void setComplemento(String Complemento) {
+        this.Complemento = Complemento;
     }
 
     
