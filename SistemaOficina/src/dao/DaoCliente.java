@@ -36,6 +36,7 @@ public class DaoCliente {
     private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_CLIENTE = ?";
     private static String SQLCONSULTAR = "SELECT * FOM CLIENTE WHERE CODIGO_CLIENTE = ?";
     
+    
     public DaoCliente(Cliente cliente){
         this.cliente = cliente;
     }

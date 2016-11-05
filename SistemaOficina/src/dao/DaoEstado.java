@@ -14,6 +14,7 @@ public class DaoEstado {
     private final String SQLALTERAR = "UPDATE ESTADO SET NOME_ESTADO = ?, SIGLA = ?, WHERE CODIGO_ESTADO = ?";
     private final String SQLEXCLUIR = "DELETE FROM ESTADO WHERE CODIGO_ESTADO = ?";
     private final String SQLCONSULTAR = "SELECT * FROM ESTADO WHERE CODIGO_ESTADO = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_ESTADO, NOME_ESTADO || '-' || SIGLA FROM ESTADO ORDER BY NOME_ESTADO";
 
 
 public DaoEstado(Estado estado){

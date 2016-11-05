@@ -10,9 +10,9 @@ import javax.swing.JOptionPane;
 
 
 public class DaoCidade {
-    public Cidade cidade;
-    public Estado estado;
-    private static String SQLINCLUIR = "INSERT INTO CIDADE (?,?,?)";
+    public Cidade cidade = new Cidade();
+    public Estado estado = new Estado();
+    private static String SQLINCLUIR = "INSERT INTO CIDADE (?,?)";
     private static String SQLALTERAR = "UPDATE CIDADE SET NOME_CIDADE = ?, CODIGO_ESTADO = ? WHERE CODIGO_CIDADE = ?";
     private static String SQLEXCLUIR = "DELETE FROM WHERE CODIGO_CIDADE = ?";
     private static String SQLCONSULTAR = "SELECT * FROM ESTADO WHERE CODIGO_CIDADE = ?";
@@ -25,7 +25,6 @@ public class DaoCidade {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLINCLUIR);
             ps.setInt(1, cidade.getCodigo_Cidade());
             ps.setString(2, cidade.getNome_Cidade());
-            ps.setInt(3, estado.getCodigo_Estado());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -39,8 +38,7 @@ public class DaoCidade {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLALTERAR);
             ps.setString(1, cidade.getNome_Cidade());
-            ps.setInt(2, estado.getCodigo_Estado());
-            ps.setInt(3, cidade.getCodigo_Cidade());
+            ps.setInt(2, cidade.getCodigo_Cidade());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -70,7 +68,7 @@ public class DaoCidade {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 cidade.setNome_Cidade(rs.getString(2));
-                estado.setSigla(rs.getString(3));
+                
             } else {
                 JOptionPane.showMessageDialog(null, "Cidade não encontrada.");
             }

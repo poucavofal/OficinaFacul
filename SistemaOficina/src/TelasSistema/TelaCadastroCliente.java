@@ -7,7 +7,10 @@ package TelasSistema;
 
 import Componentes.MeuCampoCPF;
 import Componentes.MeuCampoData;
+import Componentes.MeuDBComboBox;
 import Componentes.MeuJTextField;
+import dao.DaoCidade;
+import dao.DaoEstado;
 
 
 
@@ -21,8 +24,6 @@ public class TelaCadastroCliente extends TelaCadastro {
     public MeuJTextField campoBairro = new MeuJTextField(false, 14, "Bairro");
     public MeuJTextField campoCEP = new MeuJTextField(false, 14, "CEP");
     public MeuJTextField campoComplemento = new MeuJTextField(false, 14, "Complemento");
-    public MeuJTextField campoCidade = new MeuJTextField(false, 14, "Cidade ");
-    public MeuJTextField campoEstado = new MeuJTextField(false, 14, "Estado ");
     public MeuJTextField campoTelCel = new MeuJTextField(false, 10, "Celular ");
     public MeuJTextField campoTelResi = new MeuJTextField(false, 10, "Residencial ");
     public MeuJTextField campoSexo = new MeuJTextField(false, 7, "Sexo ");
@@ -40,8 +41,7 @@ public class TelaCadastroCliente extends TelaCadastro {
     adicionaComponente(7, 1, 1 , 1, campoBairro);
     adicionaComponente(7, 3, 1 , 1, campoCEP);
     adicionaComponente(9, 1, 1 , 1, campoComplemento);
-    adicionaComponente(9, 3, 1 , 1, campoCidade);
-    adicionaComponente(11, 1, 1 , 1, campoEstado);
+    //adicionaComponente(9, 3, 1 , 1, campoCidade);
     adicionaComponente(11, 3, 1 , 1, campoTelCel);
     adicionaComponente(13, 1, 1 , 1, campoTelResi);
     adicionaComponente(13, 3, 1 , 1, campoSexo);
