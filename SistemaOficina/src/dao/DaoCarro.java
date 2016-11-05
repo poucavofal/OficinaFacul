@@ -1,34 +1,36 @@
 
 package dao;
 
-import Pojo.Cor;
+import Pojo.Carro;
 import bd.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-
-public class DaoCor {
-    public Cor cor = new Cor();
-    private static String SQLINCLUIR = "INSERT INTO COR (?,?)";
-    private static String SQLALTERAR = "UPDATE COR SET NOME_COR = ?, CODIGO_COR = ?";
-    private static String SQLEXCLUIR = "DELETE FROM WHERE CODIGO_COR = ?";
-    private static String SQLCONSULTAR = "SELECT * FROM ESTADO WHERE CODIGO_CIDADE = ?";
+public class DaoCarro {
+    public Carro carro = new Carro();
+    private static String SQLINCLUIR = "INSERT INTO CARRO (?,?,?,?,?)";
+    private static String SQLALTERAR = "UPDATE CARRO SET CODIGO_MARCA = ?, CODIGO_COR = ? CODIGO_CARRO = ? PLACA_CARRO = ? Codigo_Modelo = ?";
+    private static String SQLEXCLUIR = "DELETE FROM WHERE CODIGO_CARRO = ?";
+    private static String SQLCONSULTAR = "SELECT * FROM CARRO WHERE CODIGO_CARRO = ?";
     
-    public DaoCor (Cor cor){
-        this.cor = cor;
+    public DaoCarro (Carro carro){
+        this.carro = carro;
     }
     public boolean incluir() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLINCLUIR);
-            ps.setInt(1, cor.getCodigo_Cor());
-            ps.setString(2, cor.getNome_Cor());
+            ps.setInt(1, carro.getCodigo_Marca());
+            ps.setInt(2, carro.getCodigo_Cor());
+            ps.setInt(3, carro.getCodigo_Carro());
+            ps.setString(4, carro.getPlaca_Carro());
+            ps.setInt(5, carro.getCodigo_Modelo());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível incluir a cor.");
+            JOptionPane.showMessageDialog(null, "Não foi possível incluir o carro.");
             return false;
         }
     }
@@ -36,13 +38,15 @@ public class DaoCor {
     public boolean alterar() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLALTERAR);
-            ps.setString(1, cor.getNome_Cor());
-            ps.setInt(2, cor.getCodigo_Cor());
+            ps.setInt(1, carro.getCodigo_Marca());
+            ps.setInt(2, carro.getCodigo_Cor());
+            ps.setInt(3, carro.getCodigo_Marca());
+            ps.setString(4, carro.getPlaca_Carro());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível alterar a cor.");
+            JOptionPane.showMessageDialog(null, "Não foi possível alterar o carro.");
             return false;
         }
     }
@@ -50,12 +54,12 @@ public class DaoCor {
     public boolean excluir() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLEXCLUIR);
-            ps.setInt(1, cor.getCodigo_Cor());
+            ps.setInt(1, carro.getCodigo_Carro());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível excluir a cor.");
+            JOptionPane.showMessageDialog(null, "Não foi possível excluir o carro.");
             return false;
         }
     }
@@ -63,10 +67,14 @@ public class DaoCor {
     public boolean consultar() {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLCONSULTAR);
-            ps.setInt(1, cor.getCodigo_Cor());
+            ps.setInt(1, carro.getCodigo_Carro());
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                cor.setNome_Cor(rs.getString(2));
+                carro.set_Marca(rs.getInt(1));
+                carro.set_Cor(rs.getString(2));
+                carro.setNome_Cor(rs.getString(2));
+                carro.setNome_Cor(rs.getString(2));
+                
                 
             } else {
                 JOptionPane.showMessageDialog(null, "Cor não encontrada.");
@@ -78,5 +86,6 @@ public class DaoCor {
             return false;
         }
     }
+    
     
 }

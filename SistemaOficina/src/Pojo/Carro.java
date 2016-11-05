@@ -8,6 +8,7 @@ public class Carro {
     private int     Codigo_Cor;
     private int     Codigo_Carro;
     private String  Placa_Carro;
+    private int     Codigo_Modelo;
 
     public int getCodigo_Marca() {
         return Codigo_Marca;
@@ -40,7 +41,15 @@ public class Carro {
     public void setPlaca_Carro(String Placa_Carro) {
         this.Placa_Carro = Placa_Carro;
     }
-    
+
+    public int getCodigo_Modelo() {
+        return Codigo_Modelo;
+    }
+
+    public void setCodigo_Modelo(int Codigo_Modelo) {
+        this.Codigo_Modelo = Codigo_Modelo;
+    }
+
     
 }
 
