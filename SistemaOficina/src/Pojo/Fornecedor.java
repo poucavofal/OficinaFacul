@@ -14,6 +14,8 @@ public class Fornecedor {
     private String  Bairro;
     private String  Cep;
     private int     Codigo_Cidade;
+    private String Complemento;
+
 
     public int getCodigo_Fornecedor() {
         return Codigo_Fornecedor;
@@ -109,6 +111,14 @@ public class Fornecedor {
 
     public void setCodigo_Cidade(int Codigo_Cidade) {
         this.Codigo_Cidade = Codigo_Cidade;
+    }
+    
+    public String getComplemento() {
+        return Complemento;
+    }
+
+    public void setComplemento(String Complemento) {
+        this.Complemento = Complemento;
     }
 
     
