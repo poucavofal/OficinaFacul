@@ -28,7 +28,7 @@ import javax.swing.JOptionPane;
 public class DaoCliente {
     
     public Cliente cliente;
-    private static String SQLINCLUIR = "INSERT INTO CLIENTE (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    private static String SQLINCLUIR = "INSERT INTO CLIENTE VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private static String SQLALTERAR = "UPDATE CLIENTE SET NOME_CLIENTE = ?, TELEFONE_CELULAR = ?,"
             + "TELEFONE_RESIDENCIAL = ?, SEXO_CLIENTE = ?, EMAIL_CLIENTE = ?, DATA_CADASTRO = ?,"
             + "RG_CLIENTE = ?, CPF_CLIENTE = ?, ENDERECO = ?, NUM_CASA = ?, BAIRRO = ?, CEP = ?,"

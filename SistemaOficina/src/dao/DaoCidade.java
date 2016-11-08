@@ -10,12 +10,11 @@ import javax.swing.JOptionPane;
 
 
 public class DaoCidade {
-    public Cidade cidade = new Cidade();
-    public Estado estado = new Estado();
-    private static String SQLINCLUIR = "INSERT INTO CIDADE (?,?)";
+    public Cidade cidade;
+    private static String SQLINCLUIR = "INSERT INTO CIDADE VALUES (?,?,?)";
     private static String SQLALTERAR = "UPDATE CIDADE SET NOME_CIDADE = ?, CODIGO_ESTADO = ? WHERE CODIGO_CIDADE = ?";
-    private static String SQLEXCLUIR = "DELETE FROM WHERE CODIGO_CIDADE = ?";
-    private static String SQLCONSULTAR = "SELECT * FROM ESTADO WHERE CODIGO_CIDADE = ?";
+    private static String SQLEXCLUIR = "DELETE FROM CIDADE WHERE CODIGO_CIDADE = ?";
+    private static String SQLCONSULTAR = "SELECT * FROM CIDADE WHERE CODIGO_CIDADE = ?";
     
     public DaoCidade (Cidade cidade){
         this.cidade = cidade;
@@ -25,6 +24,7 @@ public class DaoCidade {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLINCLUIR);
             ps.setInt(1, cidade.getCodigo_Cidade());
             ps.setString(2, cidade.getNome_Cidade());
+            ps.setInt(3, cidade.getCodigo_Estado());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {

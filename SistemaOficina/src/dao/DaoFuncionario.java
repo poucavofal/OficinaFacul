@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
 public class DaoFuncionario {
     
     public Funcionario funcionario;
-    private static String SQLINCLUIR = "INSERT INTO FUNCIONARIO (?,?,?,?,?,?,?,?,?,?)";
-    private static String SQLALTERAR = "UPDATE CLIENTE SET NOME_FUNCIONARIO = ?, TELEFONE_CELULAR = ?,"
+    private static String SQLINCLUIR = "INSERT INTO FUNCIONARIO VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+    private static String SQLALTERAR = "UPDATE FUNCIONARIO SET NOME_FUNCIONARIO = ?, TELEFONE_CELULAR = ?,"
             + "TELEFONE_RESIDENCIAL = ?,RG_FUNCIONARIO = ?, CPF_FUNCIONARIO = ?, ENDERECO_FUNCIONARIO = ?, "
             + "NUM_CASA = ?, BAIRRO_FUNCIONARIO = ?,CODIGO_CIDADE = ?, CEP = ? WHERE CODIGO_FUNCIONARIO = ?";
-    private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_FUNCIONARIO = ?";
-    private static String SQLCONSULTAR = "SELECT * FOM CLIENTE WHERE CODIGO_FUNCIONARIO = ?";
+    private static String SQLEXCLUIR = "DELETE FROM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
+    private static String SQLCONSULTAR = "SELECT * FOM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
     
     public DaoFuncionario(Funcionario funcionario){
         this.funcionario = funcionario;

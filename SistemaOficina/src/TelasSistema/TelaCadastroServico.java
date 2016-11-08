@@ -15,6 +15,7 @@ public class TelaCadastroServico extends TelaCadastro {
         adicionaComponente(1, 1, 1 , 1, campoCodigo);
         adicionaComponente(1, 3, 1 , 1, campoNome);
         pack();
+        habilitaComponentes(false);
     }
     public void setPersistencia() {
         servico.setCodigo_Servico(Integer.parseInt(campoCodigo.getText()));

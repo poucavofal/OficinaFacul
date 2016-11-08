@@ -25,6 +25,7 @@ public class TelaCadastroCidade extends TelaCadastro {
     public void setPersistencia() {
         cidade.setCodigo_Cidade(Integer.parseInt(campoCodigo.getText()));
         cidade.setNome_Cidade(campoNome.getText());
+        cidade.setCodigo_Estado(campoEstado.getValor());
     }
 
     @Override
@@ -50,6 +51,7 @@ public class TelaCadastroCidade extends TelaCadastro {
         cidade.setCodigo_Cidade(Integer.parseInt(campoCodigo.getText()));
         if (daoCidade.consultar()) {
             campoNome.setText(cidade.getNome_Cidade());
+            campoEstado.setValor(cidade.getCodigo_Estado());
             return true;
         } else {
             return false;

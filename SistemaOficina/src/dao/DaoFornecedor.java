@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class DaoFornecedor {
     public Fornecedor fornecedor;
-    private static String SQLINCLUIR = "INSERT INTO FORNECEDOR (?,?,?,?,?,?,?,?,?,?,?,?)";
+    private static String SQLINCLUIR = "INSERT INTO FORNECEDOR VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
     private static String SQLALTERAR = "UPDATE FORNECEDOR SET NOME_FORNECEDOR = ?, TELEFONE_COMERCIAL = ?,"
             + "NOME_VENDEDOR = ?,TELEFONE_CELULAR = ?, EMAIL_FORNECEDOR = ?, CNPJ = ?, "
             + "ENDERECO = ?, NUM_ESTABE = ?,BAIRRO = ?, CEP = ?,CODIGO_CIDADE = ? WHERE CODIGO_FORNECEDOR = ?";

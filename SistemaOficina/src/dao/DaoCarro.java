@@ -10,9 +10,9 @@ import javax.swing.JOptionPane;
 
 public class DaoCarro {
     public Carro carro = new Carro();
-    private static String SQLINCLUIR = "INSERT INTO CARRO (?,?,?,?,?)";
+    private static String SQLINCLUIR = "INSERT INTO CARRO VALUES (?,?,?,?,?)";
     private static String SQLALTERAR = "UPDATE CARRO SET CODIGO_MARCA = ?, CODIGO_COR = ? CODIGO_CARRO = ? PLACA_CARRO = ? Codigo_Modelo = ?";
-    private static String SQLEXCLUIR = "DELETE FROM WHERE CODIGO_CARRO = ?";
+    private static String SQLEXCLUIR = "DELETE FROM CARRO WHERE CODIGO_CARRO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM CARRO WHERE CODIGO_CARRO = ?";
     
     public DaoCarro (Carro carro){
@@ -70,10 +70,10 @@ public class DaoCarro {
             ps.setInt(1, carro.getCodigo_Carro());
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                carro.set_Marca(rs.getInt(1));
-                carro.set_Cor(rs.getString(2));
-                carro.setNome_Cor(rs.getString(2));
-                carro.setNome_Cor(rs.getString(2));
+//                carro.setCodigo_Marca(rs.getInt(1));
+//                carro.setCodigo_Cor(rs.getString(2));
+//                carro.setNome_Cor(rs.getString(3));
+//                carro.setNome_Cor(rs.getString(4));
                 
                 
             } else {

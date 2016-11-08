@@ -3,6 +3,7 @@ package TelasSistema;
 
 import Componentes.MeuJTextField;
 import Pojo.Produto;
+import dao.DaoProduto;
 
 public class TelaCadastroProduto extends TelaCadastro {
     public Produto produto = new Produto ();
@@ -20,40 +21,40 @@ public class TelaCadastroProduto extends TelaCadastro {
         adicionaComponente(3, 3, 1 , 1, campoCor);
         pack();
     }
-    public void setPersistencia() {
-        produto.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
-        produto.setNome_Estado(campoNEstado.getText());
-        produto.setSigla(campoSigla.getText());
-        produto.setSigla(campoSigla.getText());
-    }
-
-    @Override
-    public boolean incluirBD() {
-        setPersistencia();
-        return daoEstado.incluir();
-    }
-
-    @Override
-    public boolean alterarBD() {
-        setPersistencia();
-        return daoEstado.alterar();
-    }
-
-    @Override
-    public boolean excluirBD() {
-        setPersistencia();
-        return daoEstado.excluir();
-    }
-
-    @Override
-    public boolean consultarBD() {
-        estado.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
-        if (daoEstado.consultar()) {
-            campoNEstado.setText(estado.getNome_Estado());
-            campoSigla.setText(estado.getSigla());
-            return true;
-        } else {
-            return false;
-        }
-    }
+//    public void setPersistencia() {
+//        produto.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
+//        produto.setNome_Estado(campoNEstado.getText());
+//        produto.setSigla(campoSigla.getText());
+//        produto.setSigla(campoSigla.getText());
+//    }
+//
+//    @Override
+//    public boolean incluirBD() {
+//        setPersistencia();
+//        return daoEstado.incluir();
+//    }
+//
+//    @Override
+//    public boolean alterarBD() {
+//        setPersistencia();
+//        return daoEstado.alterar();
+//    }
+//
+//    @Override
+//    public boolean excluirBD() {
+//        setPersistencia();
+//        return daoEstado.excluir();
+//    }
+//
+//    @Override
+//    public boolean consultarBD() {
+//        estado.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
+//        if (daoEstado.consultar()) {
+//            campoNEstado.setText(estado.getNome_Estado());
+//            campoSigla.setText(estado.getSigla());
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 }

@@ -22,42 +22,42 @@ public class TelaOrdemServico extends TelaCadastro {
         adicionaComponente(3, 5, 1 , 1, campoStatus);
         pack();
     }
-    public void setPersistencia() {
-        estado.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
-        estado.setNome_Estado(campoNEstado.getText());
-        estado.setSigla(campoSigla.getText());
-        estado.setSigla(campoSigla.getText());
-    }
-
-    @Override
-    public boolean incluirBD() {
-        setPersistencia();
-        return daoEstado.incluir();
-    }
-
-    @Override
-    public boolean alterarBD() {
-        setPersistencia();
-        return daoEstado.alterar();
-    }
-
-    @Override
-    public boolean excluirBD() {
-        setPersistencia();
-        return daoEstado.excluir();
-    }
-
-    @Override
-    public boolean consultarBD() {
-        estado.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
-        if (daoEstado.consultar()) {
-            campoNEstado.setText(estado.getNome_Estado());
-            campoSigla.setText(estado.getSigla());
-            return true;
-        } else {
-            return false;
-        }
-    }
+//    public void setPersistencia() {
+//        estado.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
+//        estado.setNome_Estado(campoNEstado.getText());
+//        estado.setSigla(campoSigla.getText());
+//        estado.setSigla(campoSigla.getText());
+//    }
+//
+//    @Override
+//    public boolean incluirBD() {
+//        setPersistencia();
+//        return daoEstado.incluir();
+//    }
+//
+//    @Override
+//    public boolean alterarBD() {
+//        setPersistencia();
+//        return daoEstado.alterar();
+//    }
+//
+//    @Override
+//    public boolean excluirBD() {
+//        setPersistencia();
+//        return daoEstado.excluir();
+//    }
+//
+//    @Override
+//    public boolean consultarBD() {
+//        estado.setCodigo_Estado(Integer.parseInt(campoCodigo.getText()));
+//        if (daoEstado.consultar()) {
+//            campoNEstado.setText(estado.getNome_Estado());
+//            campoSigla.setText(estado.getSigla());
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 }
 
     

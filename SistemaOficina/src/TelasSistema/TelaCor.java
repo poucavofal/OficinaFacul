@@ -26,6 +26,7 @@ public class TelaCor extends TelaCadastro {
     public boolean incluirBD() {
         setPersistencia();
         return daoCor.incluir();
+    
     }
 
     @Override
