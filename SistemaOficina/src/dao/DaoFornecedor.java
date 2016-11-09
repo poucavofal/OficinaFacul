@@ -89,6 +89,16 @@ public class DaoFornecedor {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 fornecedor.setNome_Fornecedor(rs.getString(2));
+                fornecedor.setTelefone_Comercial(rs.getString(3));
+                fornecedor.setNome_Vendedor(rs.getString(4));
+                fornecedor.setTelefone_Celular(rs.getString(5));
+                fornecedor.setEmail_Fornecedor(rs.getString(6));
+                fornecedor.setCNPJ(rs.getString(7));
+                fornecedor.setEndereco(rs.getString(8));
+                fornecedor.setNum_Estabe(rs.getString(9));
+                fornecedor.setBairro(rs.getString(10));
+                fornecedor.setCep(rs.getString(11));
+                fornecedor.setCodigo_Cidade(rs.getInt(12));
             } else {
                 JOptionPane.showMessageDialog(null, "fornecedor não encontrado.");
             }

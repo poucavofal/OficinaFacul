@@ -18,7 +18,6 @@ public class Cliente {
     private String  Cep;
     private String Complemento;
     private int     Codigo_Cidade;
-    private String  Status;
 
     public int getCodigo_Cliente() {
         return Codigo_Cliente;
@@ -132,13 +131,6 @@ public class Cliente {
         this.Codigo_Cidade = Codigo_Cidade;
     }
     
-    public String getStatus() {
-        return Status;
-    }
-
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
     public String getComplemento() {
         return Complemento;
     }

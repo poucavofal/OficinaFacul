@@ -15,6 +15,7 @@ public class DaoCor {
     private static String SQLALTERAR = "UPDATE COR SET NOME_COR = ? WHERE CODIGO_COR = ?";
     private static String SQLEXCLUIR = "DELETE FROM COR WHERE CODIGO_COR = ?";
     private static String SQLCONSULTAR = "SELECT * FROM COR WHERE CODIGO_COR = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_COR, NOME_COR FROM COR ORDER BY NOME_COR";
     
     public DaoCor (Cor cor){
         this.cor = cor;

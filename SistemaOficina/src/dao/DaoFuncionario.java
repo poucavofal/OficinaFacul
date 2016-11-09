@@ -17,7 +17,7 @@ public class DaoFuncionario {
             + "TELEFONE_RESIDENCIAL = ?,RG_FUNCIONARIO = ?, CPF_FUNCIONARIO = ?, ENDERECO_FUNCIONARIO = ?, "
             + "NUM_CASA = ?, BAIRRO_FUNCIONARIO = ?,CODIGO_CIDADE = ?, CEP = ? WHERE CODIGO_FUNCIONARIO = ?";
     private static String SQLEXCLUIR = "DELETE FROM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
-    private static String SQLCONSULTAR = "SELECT * FOM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
+    private static String SQLCONSULTAR = "SELECT * FROM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
     
     public DaoFuncionario(Funcionario funcionario){
         this.funcionario = funcionario;
@@ -39,7 +39,6 @@ public class DaoFuncionario {
                 ps.executeUpdate();
                 return true;
             } catch (SQLException ex) {
-                
                 ex.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Nao foi possivel incluir o funcionario;");
                 return false;
@@ -89,6 +88,15 @@ public class DaoFuncionario {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 funcionario.setNome_Funcionario(rs.getString(2));
+                funcionario.setTelefone_Celular(rs.getString(3));
+                funcionario.setTelefone_Residencial(rs.getString(4));
+                funcionario.setRG_Funcionario(rs.getString(5));
+                funcionario.setCPF_Funcionario(rs.getString(6));
+                funcionario.setEndereco_Funcionario(rs.getString(7));
+                funcionario.setNum_Casa(rs.getString(8));
+                funcionario.setBairro_Funcionario(rs.getString(9));
+                funcionario.setCodigo_Cidade(rs.getInt(10));
+                funcionario.setCep(rs.getString(11));
             } else {
                 JOptionPane.showMessageDialog(null, "funcionario não encontrado.");
             }

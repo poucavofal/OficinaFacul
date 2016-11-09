@@ -1,8 +1,10 @@
 
 package TelasSistema;
 
+import Componentes.MeuDBComboBox;
 import Componentes.MeuJTextField;
 import Pojo.Funcionario;
+import dao.DaoCidade;
 import dao.DaoFuncionario;
 
 
@@ -17,10 +19,9 @@ public class TelaCadastroFuncionario extends TelaCadastro {
     public MeuJTextField campoTelResi = new MeuJTextField(false,10, "Tel. Residencial ");
     public MeuJTextField campoEndereco = new MeuJTextField(false,14, "Endereço");
     public MeuJTextField campoNCasa = new MeuJTextField(false,14, "Nº");
-    public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro:");
+    public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro");
     public MeuJTextField campoCEP = new MeuJTextField(false,14, "CEP");
-    //public MeuJTextField campoComplemento = new MeuJTextField(false,14, "Complemento");
-    public MeuJTextField campoCidade = new MeuJTextField(false,14, "Cidade");
+    public MeuDBComboBox campoCidade = new MeuDBComboBox(false,DaoCidade.SQLCOMBOBOX, "Cidade");
     public MeuJTextField campoEspaco = new MeuJTextField(false,0,"");
 
     public TelaCadastroFuncionario(){
@@ -35,8 +36,7 @@ public class TelaCadastroFuncionario extends TelaCadastro {
         adicionaComponente(7, 3, 1 , 1, campoNCasa);
         adicionaComponente(9, 1, 1 , 1, campoBairro);
         adicionaComponente(9, 3, 1 , 1, campoCEP);
-        //adicionaComponente(11, 1, 1 , 1, campoComplemento);
-        adicionaComponente(11, 3, 1 , 1, campoCidade);
+        adicionaComponente(11, 1, 1 , 1, campoCidade);
         pack();
         habilitaComponentes(false);
     }
@@ -51,8 +51,7 @@ public class TelaCadastroFuncionario extends TelaCadastro {
         funcionario.setNum_Casa(campoNCasa.getText());
         funcionario.setBairro_Funcionario(campoBairro.getText());
         funcionario.setCep(campoCEP.getText());
-        //funcionario.set(campoComplemento.getText());
-        funcionario.setCodigo_Cidade(Integer.parseInt(campoCidade.getText()));
+        funcionario.setCodigo_Cidade(Integer.parseInt(""+campoCidade.getValor()));
         
     }
 
@@ -87,7 +86,7 @@ public class TelaCadastroFuncionario extends TelaCadastro {
             campoNCasa.setText(funcionario.getNum_Casa());
             campoBairro.setText(funcionario.getBairro_Funcionario());
             campoCEP.setText(funcionario.getCep());
-            //campoCidade.setText(funcionario.getCodigo_Cidade());
+            campoCidade.setValor(funcionario.getCodigo_Cidade());
             return true;
         } else {
             return false;

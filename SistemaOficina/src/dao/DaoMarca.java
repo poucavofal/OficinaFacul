@@ -14,6 +14,7 @@ public class DaoMarca {
     private static String SQLALTERAR = "UPDATE MARCA SET NOME_MARCAR = ? WHERE CODIGO_MARCA = ?";
     private static String SQLEXCLUIR = "DELETE FROM MARCA WHERE CODIGO_MARCA = ?";
     private static String SQLCONSULTAR = "SELECT * FROM MARCA WHERE CODIGO_MARCA = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_MARCA, NOME_MARCA FROM MARCA ORDER BY NOME_MARCA";
     
     public DaoMarca (Marca marca){
         this.marca = marca;

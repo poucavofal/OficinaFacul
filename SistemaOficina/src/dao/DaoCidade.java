@@ -15,6 +15,7 @@ public class DaoCidade {
     private static String SQLALTERAR = "UPDATE CIDADE SET NOME_CIDADE = ?, CODIGO_ESTADO = ? WHERE CODIGO_CIDADE = ?";
     private static String SQLEXCLUIR = "DELETE FROM CIDADE WHERE CODIGO_CIDADE = ?";
     private static String SQLCONSULTAR = "SELECT * FROM CIDADE WHERE CODIGO_CIDADE = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_CIDADE, NOME_CIDADE || '-' || SIGLA FROM ESTADO, CIDADE ORDER BY NOME_CIDADE";
     
     public DaoCidade (Cidade cidade){
         this.cidade = cidade;

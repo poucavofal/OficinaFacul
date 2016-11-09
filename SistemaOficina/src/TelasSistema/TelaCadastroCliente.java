@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package TelasSistema;
 
 import Componentes.MeuCampoCPF;
@@ -10,9 +5,14 @@ import Componentes.MeuCampoData;
 import Componentes.MeuDBComboBox;
 import Componentes.MeuJTextField;
 import Pojo.Cliente;
+import bd.Conexao;
 import dao.DaoCidade;
 import dao.DaoCliente;
 import dao.DaoEstado;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 
 
@@ -28,7 +28,7 @@ public class TelaCadastroCliente extends TelaCadastro {
     public MeuJTextField campoBairro = new MeuJTextField(false, 14, "Bairro");
     public MeuJTextField campoCEP = new MeuJTextField(false, 14, "CEP");
     public MeuJTextField campoComplemento = new MeuJTextField(false, 14, "Complemento");
-    public MeuJTextField campoCidade = new MeuJTextField(false, 14, "Cidade");
+    public MeuDBComboBox campoCidade = new MeuDBComboBox(true, DaoCidade.SQLCOMBOBOX, "Cidade");
     public MeuJTextField campoTelCel = new MeuJTextField(false, 10, "Celular ");
     public MeuJTextField campoTelResi = new MeuJTextField(false, 10, "Residencial ");
     public MeuJTextField campoSexo = new MeuJTextField(false, 7, "Sexo ");
@@ -46,12 +46,12 @@ public class TelaCadastroCliente extends TelaCadastro {
     adicionaComponente(7, 1, 1 , 1, campoBairro);
     adicionaComponente(7, 3, 1 , 1, campoCEP);
     adicionaComponente(9, 1, 1 , 1, campoComplemento);
-    adicionaComponente(9, 3, 1 , 1, campoCidade);
-    adicionaComponente(11, 3, 1 , 1, campoTelCel);
-    adicionaComponente(13, 1, 1 , 1, campoTelResi);
-    adicionaComponente(13, 3, 1 , 1, campoSexo);
-    adicionaComponente(15, 1, 1 , 1, campoEmail);
-    adicionaComponente(15, 3, 1 , 1, campoDataCadastro);
+    adicionaComponente(15, 1, 1 , 1, campoCidade);
+    adicionaComponente(9, 3, 1 , 1, campoTelCel);
+    adicionaComponente(11, 1, 1 , 1, campoTelResi);
+    adicionaComponente(13, 1, 1 , 1, campoSexo);
+    adicionaComponente(11, 3, 1 , 1, campoEmail);
+    adicionaComponente(13, 3, 1 , 1, campoDataCadastro);
     pack();
     habilitaComponentes(false);
     }
@@ -65,11 +65,11 @@ public class TelaCadastroCliente extends TelaCadastro {
         cliente.setBairro(campoBairro.getText());
         cliente.setCep(campoCEP.getText());
         cliente.setComplemento(campoComplemento.getText());
-        cliente.setCodigo_Cidade(Integer.parseInt(campoCidade.getText()));
-        cliente.setNome_Cliente(campoTelCel.getText());
-        cliente.setNome_Cliente(campoSexo.getText());
-        cliente.setNome_Cliente(campoEmail.getText());
-        cliente.setNome_Cliente(campoDataCadastro.getText());
+        cliente.setCodigo_Cidade(Integer.parseInt(""+campoCidade.getValor()));
+        cliente.setTelefone_Celular(campoTelCel.getText());
+        cliente.setSexo_Cliente(campoSexo.getText());
+        cliente.setEmail_Cliente(campoEmail.getText());
+        cliente.setData_Cadastro(campoDataCadastro.getText());
     }
 
     @Override
@@ -90,23 +90,24 @@ public class TelaCadastroCliente extends TelaCadastro {
         return daoCliente.excluir();
     }
 
+    
     @Override
     public boolean consultarBD() {
         cliente.setCodigo_Cliente(Integer.parseInt(campoCodigo.getText()));
         if (daoCliente.consultar()) {
-            cliente.setNome_Cliente(campoNome.getText());
-            cliente.setRG_Cliente(campoRG.getText());
-            cliente.setCPF_Cliente(campoCPF.getText());
-            cliente.setEndereco(campoEndereco.getText());
-            cliente.setNum_Casa(campoNCasa.getText());
-            cliente.setBairro(campoBairro.getText());
-            cliente.setCep(campoCEP.getText());
-            cliente.setComplemento(campoComplemento.getText());
-            cliente.setCodigo_Cidade(Integer.parseInt(campoCidade.getText()));
-            cliente.setNome_Cliente(campoTelCel.getText());
-            cliente.setNome_Cliente(campoSexo.getText());
-            cliente.setNome_Cliente(campoEmail.getText());
-            cliente.setNome_Cliente(campoDataCadastro.getText());
+            campoNome.setText(cliente.getNome_Cliente());
+            campoTelCel.setText(cliente.getTelefone_Celular());
+            campoTelResi.setText(cliente.getTelefone_Residencial());
+            campoSexo.setText(cliente.getSexo_Cliente());
+            campoEmail.setText(cliente.getEmail_Cliente());
+            campoDataCadastro.setText(cliente.getData_Cadastro());
+            campoRG.setText(cliente.getRG_Cliente());
+            campoCPF.setText(cliente.getCPF_Cliente());
+            campoEndereco.setText(cliente.getEndereco());
+            campoNCasa.setText(cliente.getNum_Casa());
+            campoBairro.setText(cliente.getBairro());
+            campoCEP.setText(cliente.getCep());
+            campoCidade.setValor(cliente.getCodigo_Cidade());
             return true;
         } else {
             return false;

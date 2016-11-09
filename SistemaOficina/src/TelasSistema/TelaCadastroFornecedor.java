@@ -1,24 +1,25 @@
 package TelasSistema;
 
+import Componentes.MeuDBComboBox;
 import Componentes.MeuJTextField;
 import Pojo.Fornecedor;
+import dao.DaoCidade;
 import dao.DaoFornecedor;
 
 public class TelaCadastroFornecedor extends TelaCadastro{
     public Fornecedor fornecedor = new Fornecedor();
     public DaoFornecedor daoFornecedor = new DaoFornecedor(fornecedor);
-    public MeuJTextField campoCodigo = new MeuJTextField(false, 10, "Codigo: ");
-    public MeuJTextField campoNome = new MeuJTextField(false, 20, "Nome: ");
-    public MeuJTextField campoCNPJ = new MeuJTextField(false, 15, "CNPJ: ");
-    public MeuJTextField campoTelComer = new MeuJTextField(false,10, "Tel. Comercial: ");
-    public MeuJTextField campoEndereco = new MeuJTextField(false,14, "Endereço:");
-    public MeuJTextField campoNumero = new MeuJTextField(false,14, "Nº:");
-    public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro:");
-    public MeuJTextField campoCEP = new MeuJTextField(false,14, "CEP:");
-    public MeuJTextField campoComplemento = new MeuJTextField(false,14, "Complemento:");
-    public MeuJTextField campoCidade = new MeuJTextField(false,14, "Cidade:");
-    public MeuJTextField campoEstado = new MeuJTextField(false,14, "Estado:");
-    public MeuJTextField campoNomeVendedor = new MeuJTextField(false, 14, "Nome do Vendedor:");
+    public MeuJTextField campoCodigo = new MeuJTextField(true, 10, "Codigo ");
+    public MeuJTextField campoNome = new MeuJTextField(true, 20, "Nome ");
+    public MeuJTextField campoCNPJ = new MeuJTextField(true, 15, "CNPJ ");
+    public MeuJTextField campoTelComer = new MeuJTextField(false,10, "Tel. Comercial ");
+    public MeuJTextField campoEndereco = new MeuJTextField(false,14, "Endereço");
+    public MeuJTextField campoNumero = new MeuJTextField(false,14, "Nº");
+    public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro");
+    public MeuJTextField campoCEP = new MeuJTextField(false,14, "CEP");
+    public MeuJTextField campoComplemento = new MeuJTextField(false,14, "Complemento");
+    public MeuDBComboBox campoCidade = new MeuDBComboBox(true,DaoCidade.SQLCOMBOBOX, "Cidade");
+    public MeuJTextField campoNomeVendedor = new MeuJTextField(true, 14, "Nome do Vendedor");
 
     public TelaCadastroFornecedor(){
         super ("Cadastro de Fornecedor");
@@ -31,10 +32,10 @@ public class TelaCadastroFornecedor extends TelaCadastro{
         adicionaComponente(7, 1, 1 , 1, campoBairro);
         adicionaComponente(7, 3, 1 , 1, campoCEP);
         adicionaComponente(9, 1, 1 , 1, campoComplemento);
-        adicionaComponente(9, 3, 1 , 1, campoCidade);
-        adicionaComponente(11, 1, 1 , 1, campoEstado);
-        adicionaComponente(11, 3, 1 , 1, campoNomeVendedor);
+        adicionaComponente(11, 1, 1 , 1, campoCidade);
+        adicionaComponente(9, 3, 1 , 1, campoNomeVendedor);
         pack();
+        habilitaComponentes(false);
     }
     public void setPersistencia() {
         fornecedor.setCodigo_Fornecedor(Integer.parseInt(campoCodigo.getText()));
@@ -46,6 +47,7 @@ public class TelaCadastroFornecedor extends TelaCadastro{
         fornecedor.setBairro(campoBairro.getText());
         fornecedor.setCep(campoCEP.getText());
         fornecedor.setComplemento(campoComplemento.getText());
+        fornecedor.setCodigo_Cidade(campoCidade.getValor());
         fornecedor.setNome_Vendedor(campoNomeVendedor.getText());
 
     }
@@ -72,15 +74,15 @@ public class TelaCadastroFornecedor extends TelaCadastro{
     public boolean consultarBD() {
         fornecedor.setCodigo_Fornecedor(Integer.parseInt(campoCodigo.getText()));
         if (daoFornecedor.consultar()) {
-        fornecedor.setNome_Fornecedor(campoNome.getText());
-        fornecedor.setCNPJ(campoCNPJ.getText());
-        fornecedor.setTelefone_Comercial(campoTelComer.getText());
-        fornecedor.setEndereco(campoEndereco.getText());
-        fornecedor.setNum_Estabe(campoNumero.getText());
-        fornecedor.setBairro(campoBairro.getText());
-        fornecedor.setCep(campoCEP.getText());
-        fornecedor.setComplemento(campoComplemento.getText());
-        fornecedor.setNome_Vendedor(campoNomeVendedor.getText());
+        campoNome.setText(fornecedor.getNome_Fornecedor());
+        campoCNPJ.setText(fornecedor.getCNPJ());
+        campoTelComer.setText(fornecedor.getTelefone_Comercial());
+        campoEndereco.setText(fornecedor.getEndereco());
+        campoNumero.setText(fornecedor.getNum_Estabe());
+        campoBairro.setText(fornecedor.getBairro());
+        campoCEP.setText(fornecedor.getCep());
+        campoCidade.setValor(fornecedor.getCodigo_Cidade());
+        campoNomeVendedor.setText(fornecedor.getNome_Vendedor());
             return true;
         } else {
             return false;

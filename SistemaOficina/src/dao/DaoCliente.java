@@ -1,18 +1,4 @@
-//    SEQUENCIA DO BANCO DE DADOS:
-//    1-CODIGO_CLIENTE
-//    2-NOME-CLIENTE
-//    3-TELEFONE_CELULAR
-//    4-TELEFONE_RESIDENCIAL
-//    5-SEXO_CLIENTE
-//    6-EMAIL_CLIENTE
-//    7-DATA_CADASTRO
-//    8-RG_CLIENTE
-//    9-CPF_CLIENTE
-//    10-ENDERECO
-//    11-NUM_CASA
-//    12-BAIRRO
-//    13-CEP
-//    14-CODIGO_CIDADE
+
 package dao;
 
 import Pojo.Cliente;
@@ -34,7 +20,7 @@ public class DaoCliente {
             + "RG_CLIENTE = ?, CPF_CLIENTE = ?, ENDERECO = ?, NUM_CASA = ?, BAIRRO = ?, CEP = ?,"
             + "CODIGO_CIDADE = ? WHERE CODIGO_CLIENTE = ?";
     private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_CLIENTE = ?";
-    private static String SQLCONSULTAR = "SELECT * FOM CLIENTE WHERE CODIGO_CLIENTE = ?";
+    private static String SQLCONSULTAR = "SELECT * FROM CLIENTE WHERE CODIGO_CLIENTE = ?";
     
     
     public DaoCliente(Cliente cliente){
@@ -113,6 +99,18 @@ public class DaoCliente {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 cliente.setNome_Cliente(rs.getString(2));
+                cliente.setTelefone_Celular(rs.getString(3));
+                cliente.setTelefone_Residencial(rs.getString(4));
+                cliente.setSexo_Cliente(rs.getString(5));
+                cliente.setEmail_Cliente(rs.getString(6));
+                cliente.setData_Cadastro(rs.getString(7));
+                cliente.setRG_Cliente(rs.getString(8));
+                cliente.setCPF_Cliente(rs.getString(9));
+                cliente.setEndereco(rs.getString(10));
+                cliente.setNum_Casa(rs.getString(11));
+                cliente.setBairro(rs.getString(12));
+                cliente.setCep(rs.getString(13));
+                cliente.setCodigo_Cidade(Integer.parseInt(rs.getString(14)));
             } else {
                 JOptionPane.showMessageDialog(null, "Cliente não encontrado.");
             }
