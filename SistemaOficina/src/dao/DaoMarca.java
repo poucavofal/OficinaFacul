@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class DaoMarca {
     public Marca marca = new Marca();
     private static String SQLINCLUIR = "INSERT INTO MARCA VALUES (?,?)";
-    private static String SQLALTERAR = "UPDATE MARCA SET NOME_MARCAR = ?, CODIGO_MARCA = ?";
+    private static String SQLALTERAR = "UPDATE MARCA SET NOME_MARCAR = ? WHERE CODIGO_MARCA = ?";
     private static String SQLEXCLUIR = "DELETE FROM MARCA WHERE CODIGO_MARCA = ?";
     private static String SQLCONSULTAR = "SELECT * FROM MARCA WHERE CODIGO_MARCA = ?";
     

@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class DaoEstado {
     private Estado estado;
     private final String SQLINCLUIR = "INSERT INTO ESTADO VALUES (?,?,?)";
-    private final String SQLALTERAR = "UPDATE ESTADO SET NOME_ESTADO = ?, SIGLA = ?, WHERE CODIGO_ESTADO = ?";
+    private final String SQLALTERAR = "UPDATE ESTADO SET NOME_ESTADO = ?, SIGLA = ? WHERE CODIGO_ESTADO = ?";
     private final String SQLEXCLUIR = "DELETE FROM ESTADO WHERE CODIGO_ESTADO = ?";
     private final String SQLCONSULTAR = "SELECT * FROM ESTADO WHERE CODIGO_ESTADO = ?";
     public static final String SQLCOMBOBOX = "SELECT CODIGO_ESTADO, NOME_ESTADO || '-' || SIGLA FROM ESTADO ORDER BY NOME_ESTADO";
@@ -73,6 +73,7 @@ public boolean incluir() {
                 estado.setSigla(rs.getString(3));
             } else {
                 JOptionPane.showMessageDialog(null, "Estado não encontrado.");
+                return false;
             }
             return true;
         } catch (SQLException e) {

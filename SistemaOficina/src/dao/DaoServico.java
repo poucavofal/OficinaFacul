@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class DaoServico {
     public Servico servico = new Servico();
     private static String SQLINCLUIR = "INSERT INTO SERVICO VALUES (?,?)";
-    private static String SQLALTERAR = "UPDATE SERVICO SET NOME_SERVICO = ?, CODIGO_SERVICO = ?";
+    private static String SQLALTERAR = "UPDATE SERVICO SET NOME_SERVICO = ? WHERE CODIGO_SERVICO = ?";
     private static String SQLEXCLUIR = "DELETE FROM SERVICO WHERE CODIGO_SERVICO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM SERVICO WHERE CODIGO_SERVICO = ?";
     

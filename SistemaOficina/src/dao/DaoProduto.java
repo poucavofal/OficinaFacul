@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 public class DaoProduto {
      public Produto produto = new Produto();
     private static String SQLINCLUIR = "INSERT INTO PRODUTO VALUES (?,?)";
-    private static String SQLALTERAR = "UPDATE PRODUTO SET NOME_PRODUTO = ?, CODIGO_PRODUTO = ?";
+    private static String SQLALTERAR = "UPDATE PRODUTO SET NOME_PRODUTO = ? WHERE CODIGO_PRODUTO = ?";
     private static String SQLEXCLUIR = "DELETE FROM PRODUTO WHERE CODIGO_PRODUTO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM PRODUTO WHERE CODIGO_PRODUTO = ?";
     

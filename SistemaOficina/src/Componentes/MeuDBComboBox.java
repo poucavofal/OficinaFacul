@@ -43,7 +43,7 @@ public class MeuDBComboBox extends JPanel implements MeuComponente {
     
     public void setValor(int valor) {
         for (int i = 0; i < dados.size(); i++) {
-            if (valor == (int) dados.get(i)[0]) {
+            if (valor == ((int) dados.get(i)[0])) {
                 jcb.setSelectedIndex(i + 1);
                 return;
             }

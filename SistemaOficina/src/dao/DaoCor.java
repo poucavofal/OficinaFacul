@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class DaoCor {
     public Cor cor = new Cor();
     private static String SQLINCLUIR = "INSERT INTO COR VALUES(?,?)";
-    private static String SQLALTERAR = "UPDATE COR SET NOME_COR = ?, CODIGO_COR = ?";
+    private static String SQLALTERAR = "UPDATE COR SET NOME_COR = ? WHERE CODIGO_COR = ?";
     private static String SQLEXCLUIR = "DELETE FROM COR WHERE CODIGO_COR = ?";
     private static String SQLCONSULTAR = "SELECT * FROM COR WHERE CODIGO_COR = ?";
     

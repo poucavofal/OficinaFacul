@@ -78,6 +78,11 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
             componentes.get(i).habilitar(status);
         }
     }
+        public void LimpaComponentes() {
+        for (int i = 0; i < componentes.size(); i++) {
+            componentes.get(i).Limpar();
+        }
+    }
     
     public boolean validaComponentes() {
         String errosObrigatorios = "", errosInvalidos = "", errosTotal = "";
@@ -160,7 +165,8 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         public void consultar(){
             estadoTela = CONSULTANDO;
             habilitaBotoes();
-            habilitaComponentes(true); 
+            habilitaComponentes(true);
+            LimpaComponentes();
 
         }
         public void confirmar(){
@@ -194,12 +200,15 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
             estadoTela = PADRAO;
             habilitaBotoes();
             habilitaComponentes(false);
+            
         }
 
         public void cancelar(){
         estadoTela = PADRAO;
+        temDadosNaTela = false;
         habilitaBotoes();
         habilitaComponentes(false);
+        LimpaComponentes();
         } 
     
         public boolean incluirBD() {

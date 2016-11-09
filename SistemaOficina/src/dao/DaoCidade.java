@@ -68,7 +68,7 @@ public class DaoCidade {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 cidade.setNome_Cidade(rs.getString(2));
-                
+                cidade.setCodigo_Estado(rs.getInt(3));
             } else {
                 JOptionPane.showMessageDialog(null, "Cidade não encontrada.");
             }

@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class DaoCarro {
     public Carro carro = new Carro();
     private static String SQLINCLUIR = "INSERT INTO CARRO VALUES (?,?,?,?,?)";
-    private static String SQLALTERAR = "UPDATE CARRO SET CODIGO_MARCA = ?, CODIGO_COR = ? CODIGO_CARRO = ? PLACA_CARRO = ? Codigo_Modelo = ?";
+    private static String SQLALTERAR = "UPDATE CARRO SET CODIGO_MARCA = ?, CODIGO_COR = ?, PLACA_CARRO = ?, Codigo_Modelo = ?, WHERE CODIGO_CARRO = ? ";
     private static String SQLEXCLUIR = "DELETE FROM CARRO WHERE CODIGO_CARRO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM CARRO WHERE CODIGO_CARRO = ?";
     
