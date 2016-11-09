@@ -33,7 +33,7 @@ public class TelaCadastroCliente extends TelaCadastro {
     public MeuJTextField campoTelResi = new MeuJTextField(false, 10, "Residencial ");
     public MeuJTextField campoSexo = new MeuJTextField(false, 7, "Sexo ");
     public MeuJTextField campoEmail = new MeuJTextField(false, 20, "E-mail ");
-    public MeuCampoData campoDataCadastro = new MeuCampoData(true, "Data de Nascimento");
+    public MeuCampoData campoDataCadastro = new MeuCampoData(false, "Data de Nascimento");
     
     public TelaCadastroCliente(){
     super("Cadastro Cliente");
