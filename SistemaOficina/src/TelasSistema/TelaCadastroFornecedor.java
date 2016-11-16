@@ -17,9 +17,9 @@ public class TelaCadastroFornecedor extends TelaCadastro{
     public MeuJTextField campoNumero = new MeuJTextField(false,14, "Nº");
     public MeuJTextField campoBairro = new MeuJTextField(false,14, "Bairro");
     public MeuJTextField campoCEP = new MeuJTextField(false,14, "CEP");
-    public MeuJTextField campoComplemento = new MeuJTextField(false,14, "Complemento");
     public MeuDBComboBox campoCidade = new MeuDBComboBox(true,DaoCidade.SQLCOMBOBOX, "Cidade");
     public MeuJTextField campoNomeVendedor = new MeuJTextField(true, 14, "Nome do Vendedor");
+    public MeuJTextField campoEmail = new MeuJTextField(true, 14, "E-Mail");
 
     public TelaCadastroFornecedor(){
         super ("Cadastro de Fornecedor");
@@ -31,9 +31,9 @@ public class TelaCadastroFornecedor extends TelaCadastro{
         adicionaComponente(5, 3, 1 , 1, campoNumero);
         adicionaComponente(7, 1, 1 , 1, campoBairro);
         adicionaComponente(7, 3, 1 , 1, campoCEP);
-        adicionaComponente(9, 1, 1 , 1, campoComplemento);
         adicionaComponente(11, 1, 1 , 1, campoCidade);
-        adicionaComponente(9, 3, 1 , 1, campoNomeVendedor);
+        adicionaComponente(9, 1, 1 , 1, campoNomeVendedor);
+        adicionaComponente(9, 3, 1 , 1, campoEmail);
         pack();
         habilitaComponentes(false);
     }
@@ -46,9 +46,9 @@ public class TelaCadastroFornecedor extends TelaCadastro{
         fornecedor.setNum_Estabe(campoNumero.getText());
         fornecedor.setBairro(campoBairro.getText());
         fornecedor.setCep(campoCEP.getText());
-        fornecedor.setComplemento(campoComplemento.getText());
         fornecedor.setCodigo_Cidade(campoCidade.getValor());
         fornecedor.setNome_Vendedor(campoNomeVendedor.getText());
+        fornecedor.setEmail_Fornecedor(campoEmail.getText());
 
     }
 
@@ -83,6 +83,7 @@ public class TelaCadastroFornecedor extends TelaCadastro{
         campoCEP.setText(fornecedor.getCep());
         campoCidade.setValor(fornecedor.getCodigo_Cidade());
         campoNomeVendedor.setText(fornecedor.getNome_Vendedor());
+        campoEmail.setText(fornecedor.getEmail_Fornecedor());
             return true;
         } else {
             return false;
