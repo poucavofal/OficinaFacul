@@ -15,6 +15,7 @@ public class DaoServico {
     private static String SQLALTERAR = "UPDATE SERVICO SET NOME_SERVICO = ? WHERE CODIGO_SERVICO = ?";
     private static String SQLEXCLUIR = "DELETE FROM SERVICO WHERE CODIGO_SERVICO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM SERVICO WHERE CODIGO_SERVICO = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_SERVICO, NOME_SERVICO FROM SERVICO ORDER BY NOME_SERVICO";
     
     public DaoServico (Servico servico){
         this.servico = servico;

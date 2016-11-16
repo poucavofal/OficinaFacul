@@ -2,6 +2,7 @@
 package TelasSistema;
 
 import Componentes.MeuComponente;
+import Componentes.MeuJTable;
 import Componentes.MeuJTextField;
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
@@ -32,6 +33,8 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     public JButton jbConsultar = new JButton("Consultar");
     public JButton jbConfirmar = new JButton("Confirmar");
     public JButton jbCancelar = new JButton ("Cancelar");
+    public JButton jbIncluirItem = new JButton ("Add. Item");
+    public JButton jbExcluirItem = new JButton ("Remove Item");
     public JPanel jpComponentes = new JPanel();
     public JPanel jpbotao = new JPanel();
     public List<MeuComponente> componentes = new ArrayList();
@@ -43,7 +46,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     getContentPane().add("Center", jpComponentes);
     getContentPane().add("South", jpbotao);
     jpComponentes.setLayout(new GridBagLayout());
-    jpbotao.setLayout(new GridLayout(1,6));
+    jpbotao.setLayout(new GridLayout(1,8));
     adicionaBotao(jbIncluir);
     adicionaBotao(jbAlterar);
     adicionaBotao(jbExcluir);
@@ -115,6 +118,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         botao.addActionListener(this);
     }
     
+    
     public void habilitaBotoes(){
         jbIncluir.setEnabled(estadoTela == PADRAO);
         jbAlterar.setEnabled(estadoTela == PADRAO && temDadosNaTela);
@@ -122,6 +126,8 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         jbConsultar.setEnabled(estadoTela == PADRAO);
         jbConfirmar.setEnabled(estadoTela != PADRAO);
         jbCancelar.setEnabled(estadoTela != PADRAO);
+        jbIncluirItem.setEnabled(estadoTela == INCLUINDO || estadoTela == ALTERANDO);
+        jbExcluirItem.setEnabled(estadoTela == INCLUINDO || estadoTela == ALTERANDO);
     }
     
     @Override
@@ -144,6 +150,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         if (e.getSource() == jbCancelar){
             cancelar();
         }
+        
     }
     public void incluir(){
         estadoTela = INCLUINDO;
@@ -214,7 +221,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         habilitaBotoes();
         habilitaComponentes(false);
         LimpaComponentes();
-        } 
+        }
     
         public boolean incluirBD() {
             return true;
@@ -235,6 +242,9 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
             return true;
             //Método a ser redefinido nas sub-classes
         }    
+        public boolean Incluiritem(){
+            return true;
+        }
     }
      
 

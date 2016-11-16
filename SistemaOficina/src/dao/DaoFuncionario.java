@@ -18,6 +18,7 @@ public class DaoFuncionario {
             + "NUM_CASA = ?, BAIRRO_FUNCIONARIO = ?,CODIGO_CIDADE = ?, CEP = ? WHERE CODIGO_FUNCIONARIO = ?";
     private static String SQLEXCLUIR = "DELETE FROM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM FUNCIONARIO WHERE CODIGO_FUNCIONARIO = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_FUNCIONARIO, NOME_FUNCIONARIO FROM FUNCIONARIO ORDER BY NOME_FUNCIONARIO";
     
     public DaoFuncionario(Funcionario funcionario){
         this.funcionario = funcionario;

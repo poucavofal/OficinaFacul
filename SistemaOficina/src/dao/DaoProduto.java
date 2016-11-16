@@ -16,6 +16,7 @@ public class DaoProduto {
     private static String SQLALTERAR = "UPDATE PRODUTO SET NOME_PECA = ?, QNTD = ?, CODIGO_COR = ?, CODIGO_MARCA = ? WHERE CODIGO_PRODUTO = ?";
     private static String SQLEXCLUIR = "DELETE FROM PRODUTO WHERE CODIGO_PRODUTO = ?";
     private static String SQLCONSULTAR = "SELECT * FROM PRODUTO WHERE CODIGO_PRODUTO = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_PRODUTO, NOME_PECA FROM PRODUTO ORDER BY NOME_PECA";
     
     public DaoProduto (Produto produto){
         this.produto = produto;

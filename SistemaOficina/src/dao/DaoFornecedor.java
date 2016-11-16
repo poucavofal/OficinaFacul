@@ -16,6 +16,7 @@ public class DaoFornecedor {
             + "ENDERECO = ?, NUM_ESTABE = ?,BAIRRO = ?, CEP = ?, CODIGO_CIDADE = ? WHERE CODIGO_FORNECEDOR = ?";
     private static String SQLEXCLUIR = "DELETE FROM FORNECEDOR WHERE CODIGO_FORNECEDOR = ?";
     private static String SQLCONSULTAR = "SELECT * FROM FORNECEDOR WHERE CODIGO_FORNECEDOR = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_FORNECEDOR, NOME_FORNECEDOR FROM FORNECEDOR ORDER BY NOME_FORNECEDOR";
     
     public DaoFornecedor(Fornecedor fornecedor){
         this.fornecedor = fornecedor;

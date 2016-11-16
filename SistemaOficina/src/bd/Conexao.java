@@ -17,7 +17,7 @@ public class Conexao {
         try {
             if (conexao == null) {
                 Class.forName("org.firebirdsql.jdbc.FBDriver");
-                conexao = DriverManager.getConnection("jdbc:firebirdsql://localhost/"+ System.getProperty("user.dir") +"/BancoDeDados/BDOFICINA.FDB", "SYSDBA", "masterkey");
+                conexao = DriverManager.getConnection("jdbc:firebirdsql://localhost/" + System.getProperty("user.dir") + "/BancoDeDados/BDOFICINA.FDB", "sysdba", "masterkey");
             }
             return conexao;
         } catch (ClassNotFoundException e) {
@@ -33,6 +33,7 @@ public class Conexao {
     public static List<Object[]> consultarComboBox(String sql) {
         try {
             List<Object[]> retorno = new ArrayList();
+            System.out.println("Erro aki");
             PreparedStatement ps = Conexao.getConexao().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()) {
