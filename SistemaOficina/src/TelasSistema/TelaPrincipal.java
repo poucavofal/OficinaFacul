@@ -1,6 +1,7 @@
 
 package TelasSistema;
 
+import Imagens.ImagemDesktop;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +13,7 @@ import javax.swing.JMenuItem;
 
 
 public class TelaPrincipal extends JFrame implements ActionListener{
-    public JDesktopPane jdp = new JDesktopPane();
+    public ImagemDesktop jdp = new ImagemDesktop();
     public JMenuBar menu = new JMenuBar();//Cria a barra de menu do sistema.
     public JMenu jmCadastros = new JMenu("Cadastros");//cria o item de menu.
     public JMenu jmOS = new JMenu("Serviço");//cria o item de menu.
@@ -27,7 +28,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     public JMenuItem jmiOS = new JMenuItem("Ordem Serviço");//cria o item de submenu.
     
 public TelaPrincipal(){
-    setTitle("Oficina do Malandro");//Coloca o Titulo na tela do sistema.
+    setTitle("Oficina Virtual");//Coloca o Titulo na tela do sistema.
     setExtendedState(MAXIMIZED_BOTH);//Maximisa a tela do sitema.
     setDefaultCloseOperation(EXIT_ON_CLOSE);//Fecha o programa por completo.
     getContentPane().add(jdp);

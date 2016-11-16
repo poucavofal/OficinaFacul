@@ -15,7 +15,7 @@ public class DaoCidade {
     private static String SQLALTERAR = "UPDATE CIDADE SET NOME_CIDADE = ?, CODIGO_ESTADO = ? WHERE CODIGO_CIDADE = ?";
     private static String SQLEXCLUIR = "DELETE FROM CIDADE WHERE CODIGO_CIDADE = ?";
     private static String SQLCONSULTAR = "SELECT * FROM CIDADE WHERE CODIGO_CIDADE = ?";
-    public static final String SQLCOMBOBOX = "SELECT CODIGO_CIDADE, NOME_CIDADE || '-' || SIGLA FROM ESTADO, CIDADE ORDER BY NOME_CIDADE";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_CIDADE, NOME_CIDADE || '-' || SIGLA FROM ESTADO, CIDADE WHERE CIDADE.CODIGO_ESTADO = ESTADO.CODIGO_ESTADO ORDER BY NOME_CIDADE";
     
     public DaoCidade (Cidade cidade){
         this.cidade = cidade;
@@ -39,7 +39,9 @@ public class DaoCidade {
         try {
             PreparedStatement ps = Conexao.getConexao().prepareStatement(SQLALTERAR);
             ps.setString(1, cidade.getNome_Cidade());
-            ps.setInt(2, cidade.getCodigo_Cidade());
+            ps.setInt(2, cidade.getCodigo_Estado());
+            ps.setInt(3, cidade.getCodigo_Cidade());
+            
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {

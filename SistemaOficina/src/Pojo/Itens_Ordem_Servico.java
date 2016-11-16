@@ -3,10 +3,10 @@ package Pojo;
 
 public class Itens_Ordem_Servico {
     private int     Codigo_Fornecedor;
-    private int     Codigo_Peca;
     private int     Codigo_Funcionario;
     private int     Codigo_Servico;
     private int     Codigo_Itens_Os;
+    private int     Codigo_Os;
 
     public int getCodigo_Fornecedor() {
         return Codigo_Fornecedor;
@@ -14,14 +14,6 @@ public class Itens_Ordem_Servico {
 
     public void setCodigo_Fornecedor(int Codigo_Fornecedor) {
         this.Codigo_Fornecedor = Codigo_Fornecedor;
-    }
-
-    public int getCodigo_Peca() {
-        return Codigo_Peca;
-    }
-
-    public void setCodigo_Peca(int Codigo_Peca) {
-        this.Codigo_Peca = Codigo_Peca;
     }
 
     public int getCodigo_Funcionario() {
@@ -47,4 +39,14 @@ public class Itens_Ordem_Servico {
     public void setCodigo_Itens_Os(int Codigo_Itens_Os) {
         this.Codigo_Itens_Os = Codigo_Itens_Os;
     }
+
+    public int getCodigo_Os() {
+        return Codigo_Os;
+    }
+
+    public void setCodigo_Os(int Codigo_Os) {
+        this.Codigo_Os = Codigo_Os;
+    }
+
+    
 }

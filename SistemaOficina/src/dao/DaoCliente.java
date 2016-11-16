@@ -1,6 +1,7 @@
 
 package dao;
 
+import Componentes.MeuDBComboBox;
 import Pojo.Cliente;
 import bd.Conexao;
 import java.sql.PreparedStatement;
@@ -21,6 +22,7 @@ public class DaoCliente {
             + "CODIGO_CIDADE = ? WHERE CODIGO_CLIENTE = ?";
     private static String SQLEXCLUIR = "DELETE FROM CLIENTE WHERE CODIGO_CLIENTE = ?";
     private static String SQLCONSULTAR = "SELECT * FROM CLIENTE WHERE CODIGO_CLIENTE = ?";
+    public static final String SQLCOMBOBOX = "SELECT CODIGO_Cliente, NOME_CLIENTE FROM CLIENTE ORDER BY NOME_CLIENTE";
     
     
     public DaoCliente(Cliente cliente){
